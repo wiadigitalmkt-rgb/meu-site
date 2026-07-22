@@ -6,7 +6,6 @@
   <title>WiaDigital | Tecnologia & Design</title>
   
   <!-- Tailwind CSS CDN -->
-  <title>WiaDigital | Desenvolvimento de Software & Tecnologia</title>
   <script src="https://cdn.tailwindcss.com"></script>
   
   <!-- Fonts: Plus Jakarta Sans, Inter & JetBrains Mono -->
@@ -20,7 +19,10 @@
   <script>
     tailwind.config = {
       theme: {
-@@ -26,408 +19,145 @@
+        extend: {
+          fontFamily: {
+            heading: ['Plus Jakarta Sans', 'sans-serif'],
+            sans: ['Inter', 'sans-serif'],
             mono: ['JetBrains Mono', 'monospace'],
           },
           colors: {
@@ -29,14 +31,9 @@
               darkCard: '#111622',
               lightBg: '#FAFAFC',
               lightCard: '#FFFFFF',
-            brand: { 
-              black: '#07090E', 
-              darkCard: '#111622', 
-              cardBorder: '#1E2638',
               blue: '#2563EB',
               blueLight: '#3B82F6',
               blueGlow: '#60A5FA'
-              blueHover: '#1D4ED8'
             }
           }
         }
@@ -67,52 +64,39 @@
     .animate-float-1 { animation: floatSlow 8s ease-in-out infinite; }
     .animate-float-2 { animation: floatFast 6s ease-in-out infinite; }
     .animate-float-3 { animation: floatSlow 10s ease-in-out infinite; }
-
-    /* Keyframes para Rolagem Infinita de Empresas */
-    @keyframes scrollLogos {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-
-    .animate-scroll {
-      display: flex;
-      width: max-content;
-      animation: scrollLogos 20s linear infinite;
-    }
-
-    .animate-scroll:hover {
-      animation-play-state: paused; /* Pausa a rolagem suavemente ao passar o mouse */
-      background-image: linear-gradient(to right, rgba(37, 99, 235, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(37, 99, 235, 0.05) 1px, transparent 1px);
-    }
   </style>
 </head>
 <body class="font-sans antialiased bg-brand-black text-gray-100 selection:bg-blue-600 selection:text-white">
-<body class="font-sans antialiased bg-brand-black text-gray-100 flex flex-col min-h-screen">
 
   <!-- HEADER -->
   <header class="fixed top-0 left-0 w-full z-50 bg-brand-black/90 backdrop-blur-md border-b border-white/10 py-3 px-6">
-  <div class="max-w-7xl mx-auto flex items-center justify-between">
-    <a href="/" class="flex items-center py-1">
-      <img src="https://i.ibb.co/0ph5hPJL/logo-wiadigital-12.png" alt="WiaDigital" class="h-10 sm:h-12 w-auto object-contain" />
-    </a>
-
-    <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300">
-      <a href="/sobre" class="hover:text-blue-400 transition-colors">Sobre</a>
-      <a href="/servicos" class="hover:text-blue-400 transition-colors">Serviços</a>
-      <a href="/portfolio" class="hover:text-blue-400 transition-colors">Portfólio</a>
-      <a href="/gratuita" class="hover:text-blue-400 transition-colors">Consultoria Gratuita</a>
-    </nav>
-
-    <div>
-      <a href="/gratuita" class="inline-flex items-center justify-center bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs sm:text-sm px-6 py-3 rounded-xl transition-all shadow-[0_0_20px_rgba(37,99,235,0.4)]">
-        Solicitar Orçamento
     <div class="max-w-7xl mx-auto flex items-center justify-between">
-      <a href="/" class="flex items-center py-1">
-        <img src="https://i.ibb.co/0ph5hPJL/logo-wiadigital-12.png" alt="WiaDigital" class="h-10 sm:h-12 w-auto object-contain" />
+      
+      <!-- LOGO -->
+      <a href="#" class="flex items-center py-1">
+        <img 
+          src="https://i.ibb.co/0ph5hPJL/logo-wiadigital-12.png" 
+          alt="WiaDigital Tecnologia & Design" 
+          class="h-10 sm:h-12 w-auto object-contain transition-transform duration-300"
+        />
       </a>
+
+      <!-- NAVIGATION -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300">
+        <a href="#inicio" class="hover:text-blue-400 transition-colors">Início</a>
+        <a href="#servicos" class="hover:text-blue-400 transition-colors">Serviços</a>
+        <a href="#processo" class="hover:text-blue-400 transition-colors">Processo</a>
+        <a href="#portfolio" class="hover:text-blue-400 transition-colors">Portfólio</a>
+      </nav>
+
+      <!-- BUTTON CTA HEADER -->
+      <div>
+        <a href="#contato" class="inline-flex items-center justify-center bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs sm:text-sm px-6 py-3 rounded-xl transition-all shadow-[0_0_20px_rgba(37,99,235,0.4)]">
+          Solicitar Orçamento
+        </a>
+      </div>
     </div>
-  </div>
-</header>
+  </header>
 
   <!-- HERO SECTION -->
   <section id="inicio" class="relative pt-36 pb-24 px-6 bg-brand-black bg-grid-pattern overflow-hidden min-h-[90vh] flex items-center">
@@ -125,12 +109,6 @@
       <div class="floating-element animate-float-1 absolute bottom-[15%] right-[35%] text-blue-500/20 font-mono text-4xl font-bold blur-[2px] select-none" data-speed="0.03">[ &nbsp; ]</div>
       <div class="absolute top-1/2 left-1/4 -translate-y-1/2 w-96 h-96 bg-blue-600/15 rounded-full blur-[120px] -z-10"></div>
     </div>
-      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300">
-        <a href="/sobre" class="hover:text-blue-400 transition-colors">Sobre</a>
-        <a href="/servicos" class="hover:text-blue-400 transition-colors">Serviços</a>
-        <a href="/portfolio" class="hover:text-blue-400 transition-colors">Portfólio</a>
-        <a href="/gratuita" class="hover:text-blue-400 transition-colors">Consultoria Gratuita</a>
-      </nav>
 
     <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 items-center relative z-10 w-full">
       
@@ -174,7 +152,7 @@
             <p class="text-gray-400 text-xs mt-1">Anos no Mercado</p>
           </div>
 
-          <!-- CARD PAÍSES -->
+          <!-- CARD PAÍSES (ATUALIZADO COM ÍCONES DAS BANDEIRAS) -->
           <div class="bg-brand-darkCard/90 backdrop-blur-md border border-white/10 p-6 rounded-2xl text-center hover:border-blue-500/40 transition-all flex flex-col items-center justify-center">
             <div class="flex items-center justify-center gap-3 mb-2">
               <img src="https://flagcdn.com/w40/br.png" alt="Brasil" class="w-7 h-auto rounded-sm object-cover shadow-sm" />
@@ -183,63 +161,21 @@
             <p class="text-gray-400 text-xs">Países Atendidos</p>
           </div>
         </div>
-      <div>
-        <a href="/gratuita" class="inline-flex items-center justify-center bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs sm:text-sm px-6 py-3 rounded-xl transition-all shadow-[0_0_20px_rgba(37,99,235,0.4)]">
-          Solicitar Orçamento
-        </a>
       </div>
 
     </div>
   </section>
-  </header>
 
-  <!-- PARCEIROS (COM ROLAGEM INFINITA CONTINUA) -->
-  <section class="py-10 bg-white border-y border-gray-200 overflow-hidden">
+  <!-- PARCEIROS -->
+  <section class="py-10 bg-white border-y border-gray-200">
     <div class="max-w-7xl mx-auto px-6 text-center">
       <p class="text-gray-400 text-xs font-semibold tracking-widest uppercase mb-6">EMPRESAS QUE CONFIAM NA WIADIGITAL</p>
-    </div>
-
-    <!-- Container do Carrossel com Efeito Fade nas Bordas -->
-    <div class="relative w-full overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
-      <div class="animate-scroll flex items-center gap-12 sm:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all">
-        
-        <!-- Bloco 1 de Empresas -->
-        <div class="flex items-center gap-12 sm:gap-16 whitespace-nowrap">
-          <span class="font-heading font-extrabold text-xl text-gray-800">Gauchos Telecom</span>
-          <span class="font-heading font-extrabold text-xl text-gray-800">Wianet Telecom</span>
-          <span class="font-heading font-extrabold text-xl text-gray-800">WiaFibra</span>
-          <span class="font-heading font-extrabold text-xl text-gray-800">WiaGeo</span>
-          <span class="font-heading font-extrabold text-xl text-gray-800">WiaPonto</span>
-        </div>
-
-        <!-- Bloco 2 de Empresas (Duplicado para criar o looping contínuo) -->
-        <div class="flex items-center gap-12 sm:gap-16 whitespace-nowrap aria-hidden:true">
-          <span class="font-heading font-extrabold text-xl text-gray-800">Gauchos Telecom</span>
-          <span class="font-heading font-extrabold text-xl text-gray-800">Wianet Telecom</span>
-          <span class="font-heading font-extrabold text-xl text-gray-800">WiaFibra</span>
-          <span class="font-heading font-extrabold text-xl text-gray-800">WiaGeo</span>
-          <span class="font-heading font-extrabold text-xl text-gray-800">WiaPonto</span>
-        </div>
-  <!-- HERO SECTION -->
-  <section class="pt-36 pb-20 px-6 bg-grid-pattern relative overflow-hidden">
-    <div class="max-w-4xl mx-auto text-center relative z-10">
-      <span class="text-xs font-mono font-semibold tracking-wider text-blue-400 uppercase bg-blue-500/10 border border-blue-500/20 px-4 py-1.5 rounded-full">
-        TECNOLOGIA SOB MEDIDA
-      </span>
-      <h1 class="font-heading font-extrabold text-4xl sm:text-6xl text-white mt-6 tracking-tight leading-tight">
-        Transforme suas ideias em <span class="text-blue-500">software de alto impacto</span>
-      </h1>
-      <p class="mt-4 text-gray-400 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
-        Desenvolvemos ecossistemas digitais completos: sistemas web, aplicativos móveis, automações e dashboards estratégicos.
-      </p>
-
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
-        <a href="/gratuita" class="w-full sm:w-auto bg-blue-600 hover:bg-blue-500 text-white font-bold text-sm px-8 py-3.5 rounded-xl transition-all shadow-[0_0_20px_rgba(37,99,235,0.4)]">
-          Agendar Consultoria Gratuita
-        </a>
-        <a href="/portfolio" class="w-full sm:w-auto bg-brand-darkCard hover:bg-white/10 border border-brand-cardBorder text-white font-semibold text-sm px-8 py-3.5 rounded-xl transition-all">
-          Conhecer Cases
-        </a>
+      <div class="flex flex-wrap items-center justify-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all">
+        <span class="font-heading font-extrabold text-xl text-gray-800">Gauchos Telecom</span>
+        <span class="font-heading font-extrabold text-xl text-gray-800">Wianet Telecom</span>
+        <span class="font-heading font-extrabold text-xl text-gray-800">WiaFibra</span>
+        <span class="font-heading font-extrabold text-xl text-gray-800">WiaGeo</span>
+        <span class="font-heading font-extrabold text-xl text-gray-800">WiaPonto</span>
       </div>
     </div>
   </section>
@@ -298,22 +234,6 @@
             <p class="text-gray-600 text-xs sm:text-sm leading-relaxed">Identidades visuais, artes para redes sociais, criativos de anúncios e branding de alto padrão.</p>
           </div>
         </div>
-  <!-- CTA BANNER -->
-  <section class="py-16 px-6 bg-brand-black border-t border-white/5">
-    <div class="max-w-5xl mx-auto bg-gradient-to-r from-brand-darkCard via-blue-950/20 to-brand-darkCard border border-brand-cardBorder p-10 sm:p-14 rounded-3xl text-center relative overflow-hidden">
-      <h2 class="font-heading font-extrabold text-2xl sm:text-4xl text-white mb-3">
-        Tem um projeto em mente?
-      </h2>
-      <p class="text-gray-400 text-xs sm:text-sm max-w-xl mx-auto mb-8 leading-relaxed">
-        Conte o desafio da sua empresa e vamos construir a solução certa juntos.
-      </p>
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="/gratuita" class="w-full sm:w-auto bg-white text-brand-black hover:bg-gray-200 font-bold text-sm px-8 py-3.5 rounded-xl transition-all">
-          Falar com a equipe ↗
-        </a>
-        <a href="/servicos" class="w-full sm:w-auto bg-transparent border border-white/20 hover:border-white text-white font-semibold text-sm px-8 py-3.5 rounded-xl transition-all">
-          Ver serviços
-        </a>
       </div>
     </div>
   </section>
@@ -327,15 +247,6 @@
           Do Planejamento à <span class="text-blue-500">Execução</span>
         </h2>
         <p class="text-gray-400 text-sm mt-3">Veja como transformamos suas ideias em realidade. Passo a passo do nosso método.</p>
-  <!-- FOOTER -->
-  <footer class="bg-brand-black border-t border-white/10 pt-16 pb-12 px-6 mt-auto">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
-      <!-- Coluna 1: Logo & Sobre -->
-      <div class="space-y-4">
-        <img src="https://i.ibb.co/0ph5hPJL/logo-wiadigital-12.png" alt="WiaDigital" class="h-10 w-auto object-contain" />
-        <p class="text-gray-400 text-xs leading-relaxed">
-          Soluções tecnológicas para empresas. Desenvolvimento de software sob medida para empresas em todo o Brasil.
-        </p>
       </div>
 
       <div class="relative border-l-2 border-blue-600/30 ml-4 sm:ml-32 space-y-12">
@@ -371,15 +282,6 @@
             <p class="text-gray-400 text-xs sm:text-sm leading-relaxed">Com o escopo aprovado, iniciamos o desenvolvimento e o design com base no plano estratégico definido, com foco total na qualidade e nos resultados.</p>
           </div>
         </div>
-      <!-- Coluna 2: Navegação -->
-      <div>
-        <h4 class="font-heading font-bold text-xs uppercase tracking-wider text-white mb-4">Navegação</h4>
-        <ul class="space-y-2.5 text-xs text-gray-400">
-          <li><a href="/" class="hover:text-blue-400 transition-colors">Início</a></li>
-          <li><a href="/sobre" class="hover:text-blue-400 transition-colors">Sobre</a></li>
-          <li><a href="/portfolio" class="hover:text-blue-400 transition-colors">Portfólio</a></li>
-          <li><a href="/servicos" class="hover:text-blue-400 transition-colors">Serviços</a></li>
-        </ul>
       </div>
     </div>
   </section>
@@ -390,15 +292,6 @@
       <div class="text-center max-w-2xl mx-auto mb-16">
         <span class="text-blue-600 font-mono text-xs uppercase tracking-widest font-bold">PORTFÓLIO</span>
         <h2 class="font-heading font-extrabold text-4xl text-gray-900 mt-2">Trabalhos em <span class="text-blue-600">Destaque</span></h2>
-      <!-- Coluna 3: Serviços -->
-      <div>
-        <h4 class="font-heading font-bold text-xs uppercase tracking-wider text-white mb-4">Serviços</h4>
-        <ul class="space-y-2.5 text-xs text-gray-400">
-          <li><a href="/servicos" class="hover:text-blue-400 transition-colors">Sistemas e SaaS</a></li>
-          <li><a href="/servicos" class="hover:text-blue-400 transition-colors">Sites e Landing Pages</a></li>
-          <li><a href="/servicos" class="hover:text-blue-400 transition-colors">Apps Mobile</a></li>
-          <li><a href="/servicos" class="hover:text-blue-400 transition-colors">Integrações</a></li>
-        </ul>
       </div>
 
       <div class="grid md:grid-cols-3 gap-8">
@@ -434,14 +327,6 @@
             <p class="text-gray-500 text-xs mt-2">Criações de alto nível para marcas e redes sociais.</p>
           </div>
         </div>
-      <!-- Coluna 4: Contato -->
-      <div>
-        <h4 class="font-heading font-bold text-xs uppercase tracking-wider text-white mb-4">Contato</h4>
-        <ul class="space-y-2.5 text-xs text-gray-400">
-          <li><a href="/gratuita" class="hover:text-blue-400 transition-colors">Fale conosco</a></li>
-          <li><a href="mailto:contato@wiadigital.com.br" class="hover:text-blue-400 transition-colors">E-mail</a></li>
-          <li><a href="https://wa.me/" target="_blank" class="hover:text-blue-400 transition-colors">WhatsApp</a></li>
-        </ul>
       </div>
     </div>
   </section>
@@ -473,9 +358,6 @@
     <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
       <img src="https://i.ibb.co/0ph5hPJL/logo-wiadigital-12.png" alt="WiaDigital" class="h-8 w-auto">
       <p>© 2026 WiaDigital. Todos os direitos reservados.</p>
-    <div class="max-w-7xl mx-auto border-t border-white/5 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 gap-4">
-      <p>© 2024 - 2026 WiaDigital. Todos os direitos reservados.</p>
-      <p>Tecnologia & Design</p>
     </div>
   </footer>
 
