@@ -64,6 +64,22 @@
     .animate-float-1 { animation: floatSlow 8s ease-in-out infinite; }
     .animate-float-2 { animation: floatFast 6s ease-in-out infinite; }
     .animate-float-3 { animation: floatSlow 10s ease-in-out infinite; }
+
+    /* Keyframes para Rolagem Infinita de Empresas */
+    @keyframes scrollLogos {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .animate-scroll {
+      display: flex;
+      width: max-content;
+      animation: scrollLogos 20s linear infinite;
+    }
+
+    .animate-scroll:hover {
+      animation-play-state: paused; /* Pausa a rolagem suavemente ao passar o mouse */
+    }
   </style>
 </head>
 <body class="font-sans antialiased bg-brand-black text-gray-100 selection:bg-blue-600 selection:text-white">
@@ -152,7 +168,7 @@
             <p class="text-gray-400 text-xs mt-1">Anos no Mercado</p>
           </div>
 
-          <!-- CARD PAÍSES (ATUALIZADO COM ÍCONES DAS BANDEIRAS) -->
+          <!-- CARD PAÍSES -->
           <div class="bg-brand-darkCard/90 backdrop-blur-md border border-white/10 p-6 rounded-2xl text-center hover:border-blue-500/40 transition-all flex flex-col items-center justify-center">
             <div class="flex items-center justify-center gap-3 mb-2">
               <img src="https://flagcdn.com/w40/br.png" alt="Brasil" class="w-7 h-auto rounded-sm object-cover shadow-sm" />
@@ -166,16 +182,34 @@
     </div>
   </section>
 
-  <!-- PARCEIROS -->
-  <section class="py-10 bg-white border-y border-gray-200">
+  <!-- PARCEIROS (COM ROLAGEM INFINITA CONTINUA) -->
+  <section class="py-10 bg-white border-y border-gray-200 overflow-hidden">
     <div class="max-w-7xl mx-auto px-6 text-center">
       <p class="text-gray-400 text-xs font-semibold tracking-widest uppercase mb-6">EMPRESAS QUE CONFIAM NA WIADIGITAL</p>
-      <div class="flex flex-wrap items-center justify-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all">
-        <span class="font-heading font-extrabold text-xl text-gray-800">Gauchos Telecom</span>
-        <span class="font-heading font-extrabold text-xl text-gray-800">Wianet Telecom</span>
-        <span class="font-heading font-extrabold text-xl text-gray-800">WiaFibra</span>
-        <span class="font-heading font-extrabold text-xl text-gray-800">WiaGeo</span>
-        <span class="font-heading font-extrabold text-xl text-gray-800">WiaPonto</span>
+    </div>
+
+    <!-- Container do Carrossel com Efeito Fade nas Bordas -->
+    <div class="relative w-full overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
+      <div class="animate-scroll flex items-center gap-12 sm:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all">
+        
+        <!-- Bloco 1 de Empresas -->
+        <div class="flex items-center gap-12 sm:gap-16 whitespace-nowrap">
+          <span class="font-heading font-extrabold text-xl text-gray-800">Gauchos Telecom</span>
+          <span class="font-heading font-extrabold text-xl text-gray-800">Wianet Telecom</span>
+          <span class="font-heading font-extrabold text-xl text-gray-800">WiaFibra</span>
+          <span class="font-heading font-extrabold text-xl text-gray-800">WiaGeo</span>
+          <span class="font-heading font-extrabold text-xl text-gray-800">WiaPonto</span>
+        </div>
+
+        <!-- Bloco 2 de Empresas (Duplicado para criar o looping contínuo) -->
+        <div class="flex items-center gap-12 sm:gap-16 whitespace-nowrap aria-hidden:true">
+          <span class="font-heading font-extrabold text-xl text-gray-800">Gauchos Telecom</span>
+          <span class="font-heading font-extrabold text-xl text-gray-800">Wianet Telecom</span>
+          <span class="font-heading font-extrabold text-xl text-gray-800">WiaFibra</span>
+          <span class="font-heading font-extrabold text-xl text-gray-800">WiaGeo</span>
+          <span class="font-heading font-extrabold text-xl text-gray-800">WiaPonto</span>
+        </div>
+
       </div>
     </div>
   </section>
