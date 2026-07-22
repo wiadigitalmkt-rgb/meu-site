@@ -8,10 +8,10 @@
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   
-  <!-- Fonts: Plus Jakarta Sans & Inter -->
+  <!-- Fonts: Plus Jakarta Sans, Inter & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
@@ -23,6 +23,7 @@
           fontFamily: {
             heading: ['Plus Jakarta Sans', 'sans-serif'],
             sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
           },
           colors: {
             brand: {
@@ -48,6 +49,21 @@
         linear-gradient(to right, rgba(37, 99, 235, 0.07) 1px, transparent 1px),
         linear-gradient(to bottom, rgba(37, 99, 235, 0.07) 1px, transparent 1px);
     }
+
+    /* Keyframes para animação contínua de flutuação */
+    @keyframes floatSlow {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-15px) rotate(3deg); }
+    }
+    
+    @keyframes floatFast {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-25px) rotate(-5deg); }
+    }
+
+    .animate-float-1 { animation: floatSlow 8s ease-in-out infinite; }
+    .animate-float-2 { animation: floatFast 6s ease-in-out infinite; }
+    .animate-float-3 { animation: floatSlow 10s ease-in-out infinite; }
   </style>
 </head>
 <body class="font-sans antialiased bg-brand-black text-gray-100 selection:bg-blue-600 selection:text-white">
@@ -56,9 +72,9 @@
   <header class="fixed top-0 left-0 w-full z-50 bg-brand-black/90 backdrop-blur-md border-b border-white/10 py-4 px-6">
     <div class="max-w-7xl mx-auto flex items-center justify-between">
       
-      <!-- LOGO (Sua Imagem) -->
+      <!-- LOGO -->
       <a href="#" class="flex items-center gap-3">
-        <img src="https://i.ibb.co/95D1zxG/letras-brancas.png" alt="WiaDigital Tecnologia & Design" class="h-10 sm:h-12 w-auto object-contain">
+        <img src="letras brancas.png" alt="WiaDigital Tecnologia & Design" class="h-10 sm:h-12 w-auto object-contain">
       </a>
 
       <!-- NAVIGATION -->
@@ -78,9 +94,42 @@
     </div>
   </header>
 
-  <!-- HERO SECTION (DARK + GRID) -->
-  <section id="inicio" class="relative pt-36 pb-24 px-6 bg-brand-black bg-grid-pattern overflow-hidden">
-    <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 items-center">
+  <!-- HERO SECTION (DARK + GRID + ELEMENTOS DE CÓDIGO FLUTUANTES) -->
+  <section id="inicio" class="relative pt-36 pb-24 px-6 bg-brand-black bg-grid-pattern overflow-hidden min-h-[90vh] flex items-center">
+    
+    <!-- SÍMBOLOS E ÍCONES FLUTUANTES NO BACKGROUND (INTERATIVOS) -->
+    <div class="absolute inset-0 pointer-events-none z-0 overflow-hidden">
+      
+      <!-- Icon 1: </> (Topo Esquerdo) -->
+      <div class="floating-element animate-float-1 absolute top-[15%] left-[8%] text-blue-500/25 font-mono text-5xl font-bold blur-[1px] select-none" data-speed="0.04">
+        &lt;/&gt;
+      </div>
+
+      <!-- Icon 2: { } (Centro Direita) -->
+      <div class="floating-element animate-float-2 absolute top-[25%] right-[12%] text-blue-400/20 font-mono text-6xl font-bold blur-[2px] select-none" data-speed="-0.03">
+        { }
+      </div>
+
+      <!-- Icon 3: const (Inferior Esquerdo) -->
+      <div class="floating-element animate-float-3 absolute bottom-[18%] left-[15%] text-blue-300/15 font-mono text-3xl font-bold blur-[1px] select-none" data-speed="0.05">
+        const dev = true;
+      </div>
+
+      <!-- Icon 4: </> Maior e bem borrado (Centro Esquerdo) -->
+      <div class="floating-element animate-float-2 absolute top-[45%] left-[30%] text-blue-600/15 font-mono text-8xl font-black blur-[4px] select-none" data-speed="-0.02">
+        &lt;/&gt;
+      </div>
+
+      <!-- Icon 5: DB Icon / Simbolo (Inferior Direito) -->
+      <div class="floating-element animate-float-1 absolute bottom-[15%] right-[35%] text-blue-500/20 font-mono text-4xl font-bold blur-[2px] select-none" data-speed="0.03">
+        [ &nbsp; ]
+      </div>
+
+      <!-- Glow radial sutil no fundo -->
+      <div class="absolute top-1/2 left-1/4 -translate-y-1/2 w-96 h-96 bg-blue-600/15 rounded-full blur-[120px] -z-10"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 items-center relative z-10 w-full">
       
       <!-- Lado Esquerdo: Texto Hero -->
       <div class="lg:col-span-7 text-left">
@@ -107,7 +156,7 @@
       <!-- Lado Direito: Cards de Métricas (Estilo Branapi) -->
       <div class="lg:col-span-5 space-y-4">
         <!-- Card 1 -->
-        <div class="bg-brand-darkCard border border-white/10 p-6 rounded-2xl flex items-center gap-5 hover:border-blue-500/40 transition-all">
+        <div class="bg-brand-darkCard/90 backdrop-blur-md border border-white/10 p-6 rounded-2xl flex items-center gap-5 hover:border-blue-500/40 transition-all">
           <div class="font-heading font-extrabold text-4xl text-blue-500">830+</div>
           <div>
             <h4 class="font-heading font-bold text-white text-sm">Projetos Entregues</h4>
@@ -117,12 +166,12 @@
 
         <!-- Grid 2 Colunas de Cards -->
         <div class="grid grid-cols-2 gap-4">
-          <div class="bg-brand-darkCard border border-white/10 p-6 rounded-2xl text-center hover:border-blue-500/40 transition-all">
+          <div class="bg-brand-darkCard/90 backdrop-blur-md border border-white/10 p-6 rounded-2xl text-center hover:border-blue-500/40 transition-all">
             <div class="font-heading font-extrabold text-3xl text-blue-500">4+</div>
             <p class="text-gray-400 text-xs mt-1">Anos no Mercado</p>
           </div>
 
-          <div class="bg-brand-darkCard border border-white/10 p-6 rounded-2xl text-center hover:border-blue-500/40 transition-all flex flex-col items-center justify-center">
+          <div class="bg-brand-darkCard/90 backdrop-blur-md border border-white/10 p-6 rounded-2xl text-center hover:border-blue-500/40 transition-all flex flex-col items-center justify-center">
             <div class="flex items-center justify-center gap-1.5 text-lg mb-1">
               <span>🇧🇷</span> <span>🇵🇹</span> <span>🇺🇸</span>
             </div>
@@ -210,7 +259,7 @@
           <p class="text-gray-600 text-xs sm:text-sm leading-relaxed">Automatize tarefas repetitivas e aumente a produtividade com soluções inteligentes.</p>
         </div>
 
-        <!-- Card 6: Design Gráfico & Branding -->
+        <!-- Card 6 -->
         <div class="bg-brand-lightCard border border-gray-200 p-8 rounded-3xl shadow-sm hover:shadow-md hover:border-blue-500/50 transition-all">
           <div class="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center text-blue-600 mb-6">
             <i data-lucide="palette" class="w-6 h-6"></i>
@@ -240,7 +289,6 @@
         
         <!-- Passo 1 -->
         <div class="relative pl-8 sm:pl-12">
-          <!-- Círculo do Passo -->
           <div class="absolute -left-[17px] top-0 w-8 h-8 rounded-full bg-brand-black border-2 border-blue-500 flex items-center justify-center text-blue-400">
             <i data-lucide="search" class="w-4 h-4"></i>
           </div>
@@ -340,7 +388,6 @@
       </p>
 
       <div class="mt-8 flex flex-wrap justify-center gap-4">
-        <!-- COLOQUE SEU NUMERO DO WHATSAPP ABAIXO -->
         <a href="https://wa.me/5500000000000" target="_blank" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold text-sm px-8 py-4 rounded-xl transition-all shadow-[0_0_25px_rgba(37,99,235,0.5)]">
           Solicitar Orçamento <i data-lucide="arrow-right" class="w-4 h-4"></i>
         </a>
@@ -366,6 +413,42 @@
 
   <script>
     lucide.createIcons();
+
+    // SCRIPT DE MOVIMENTO PARALLAX DOS SÍMBOLOS COM O MOUSE
+    const heroSection = document.getElementById('inicio');
+    const floatingElements = document.querySelectorAll('.floating-element');
+
+    if (heroSection && floatingElements.length > 0) {
+      heroSection.addEventListener('mousemove', (e) => {
+        const { clientX, clientY } = e;
+        const centerX = window.innerWidth / 2;
+        const centerY = window.innerHeight / 2;
+
+        const deltaX = clientX - centerX;
+        const deltaY = clientY - centerY;
+
+        floatingElements.forEach((el) => {
+          const speed = parseFloat(el.getAttribute('data-speed')) || 0.03;
+          const x = deltaX * speed;
+          const y = deltaY * speed;
+          el.style.transform = `translate(${x}px, ${y}px)`;
+        });
+      });
+
+      // Volta suavemente ao centro quando o mouse sai da seção
+      heroSection.addEventListener('mouseleave', () => {
+        floatingElements.forEach((el) => {
+          el.style.transform = `translate(0px, 0px)`;
+          el.style.transition = 'transform 0.6s ease-out';
+        });
+      });
+
+      heroSection.addEventListener('mouseenter', () => {
+        floatingElements.forEach((el) => {
+          el.style.transition = 'none';
+        });
+      });
+    }
   </script>
 </body>
 </html>
