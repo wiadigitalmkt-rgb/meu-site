@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfólio | WiaDigital</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            heading: ['Plus Jakarta Sans', 'sans-serif'],
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            brand: {
+              black: '#07090E',
+              darkCard: '#111622',
+              lightBg: '#FAFAFC',
+              blue: '#2563EB',
+              blueLight: '#3B82F6',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .bg-grid-pattern {
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, rgba(37, 99, 235, 0.07) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(37, 99, 235, 0.07) 1px, transparent 1px);
+    }
+  </style>
+</head>
+<body class="font-sans antialiased bg-brand-black text-gray-100 selection:bg-blue-600 selection:text-white flex flex-col min-h-screen">
+
+  <!-- HEADER -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-brand-black/90 backdrop-blur-md border-b border-white/10 py-3 px-6">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <a href="../" class="flex items-center py-1">
+        <img src="https://i.ibb.co/0ph5hPJL/logo-wiadigital-12.png" alt="WiaDigital" class="h-10 sm:h-12 w-auto object-contain" />
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300">
+        <a href="../#inicio" class="hover:text-blue-400 transition-colors">Início</a>
+        <a href="../#servicos" class="hover:text-blue-400 transition-colors">Serviços</a>
+        <a href="../#processo" class="hover:text-blue-400 transition-colors">Processo</a>
+        <a href="./" class="text-blue-400 font-semibold border-b-2 border-blue-500 pb-1">Portfólio</a>
+      </nav>
+
+      <div>
+        <a href="../#contato" class="inline-flex items-center justify-center bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs sm:text-sm px-6 py-3 rounded-xl transition-all shadow-[0_0_20px_rgba(37,99,235,0.4)]">
+          Solicitar Orçamento
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO PORTFÓLIO -->
+  <section class="pt-36 pb-12 px-6 bg-brand-black bg-grid-pattern relative">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="font-heading font-extrabold text-4xl sm:text-6xl text-white tracking-tight">
+        Nossos <span class="text-blue-500">Projetos</span>
+      </h1>
+      <p class="mt-4 text-gray-400 text-sm sm:text-base max-w-2xl mx-auto">
+        Conheça algumas das soluções digitais que desenvolvemos para transformar a realidade de nossos clientes.
+      </p>
+
+      <!-- FILTROS (Estilo Codepacce) -->
+      <div class="mt-10 flex flex-wrap justify-center gap-2 sm:gap-3" id="filter-buttons">
+        <button onclick="filterProjects('todos')" class="filter-btn active bg-blue-600 text-white text-xs sm:text-sm font-semibold px-4 py-2 rounded-full transition-all border border-blue-500">Todos</button>
+        <button onclick="filterProjects('fintech')" class="filter-btn bg-brand-darkCard hover:bg-white/10 text-gray-300 text-xs sm:text-sm font-medium px-4 py-2 rounded-full transition-all border border-white/10">Fintech</button>
+        <button onclick="filterProjects('institucional')" class="filter-btn bg-brand-darkCard hover:bg-white/10 text-gray-300 text-xs sm:text-sm font-medium px-4 py-2 rounded-full transition-all border border-white/10">Institucional</button>
+        <button onclick="filterProjects('saas')" class="filter-btn bg-brand-darkCard hover:bg-white/10 text-gray-300 text-xs sm:text-sm font-medium px-4 py-2 rounded-full transition-all border border-white/10">SaaS / Sistemas</button>
+        <button onclick="filterProjects('e-commerce')" class="filter-btn bg-brand-darkCard hover:bg-white/10 text-gray-300 text-xs sm:text-sm font-medium px-4 py-2 rounded-full transition-all border border-white/10">Comércio Eletrônico</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- GRID DE PROJETOS -->
+  <section class="py-12 px-6 bg-brand-black flex-grow">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
+        
+        <!-- CARD 1 -->
+        <div class="project-card fintech bg-brand-darkCard border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/50 transition-all group flex flex-col justify-between">
+          <div>
+            <div class="h-48 bg-gradient-to-br from-emerald-900/40 to-emerald-600/20 flex items-center justify-center p-6 border-b border-white/5 relative overflow-hidden">
+              <div class="w-20 h-20 bg-emerald-500 rounded-2xl flex items-center justify-center font-bold text-3xl text-white shadow-lg group-hover:scale-110 transition-transform duration-300">
+                b
+              </div>
+            </div>
+            <div class="p-6">
+              <span class="text-[10px] font-mono font-semibold text-blue-400 bg-blue-500/10 border border-blue-500/20 px-3 py-1 rounded-full">Fintech</span>
+              <h3 class="font-heading font-bold text-xl text-white mt-3">Bestfy</h3>
+              <p class="text-gray-400 text-xs mt-2 leading-relaxed">Desenvolvemos o site institucional da Bestfy BR, uma porta de pagamentos inovadora que oferece automação financeira e segurança.</p>
+            </div>
+          </div>
+          <div class="px-6 pb-6 pt-2 flex items-center justify-between border-t border-white/5 text-xs text-gray-500">
+            <span class="flex items-center gap-1"><i data-lucide="calendar" class="w-3.5 h-3.5"></i> 27/06/2025</span>
+            <a href="#" class="text-blue-400 hover:text-blue-300 font-semibold inline-flex items-center gap-1 transition-colors">Ver detalhes <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></a>
+          </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="project-card institucional bg-brand-darkCard border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/50 transition-all group flex flex-col justify-between">
+          <div>
+            <div class="h-48 bg-gradient-to-br from-blue-900/40 to-blue-600/20 flex items-center justify-center p-6 border-b border-white/5 relative overflow-hidden">
+              <div class="flex items-center gap-2 text-blue-400 font-heading font-extrabold text-2xl group-hover:scale-110 transition-transform duration-300">
+                <i data-lucide="truck" class="w-8 h-8"></i> PRIMU'S LOG
+              </div>
+            </div>
+            <div class="p-6">
+              <span class="text-[10px] font-mono font-semibold text-blue-400 bg-blue-500/10 border border-blue-500/20 px-3 py-1 rounded-full">Institucional</span>
+              <h3 class="font-heading font-bold text-xl text-white mt-3">Diário de Primus</h3>
+              <p class="text-gray-400 text-xs mt-2 leading-relaxed">Site institucional completo para empresa especializada em logística e transporte rodoviário de cargas.</p>
+            </div>
+          </div>
+          <div class="px-6 pb-6 pt-2 flex items-center justify-between border-t border-white/5 text-xs text-gray-500">
+            <span class="flex items-center gap-1"><i data-lucide="calendar" class="w-3.5 h-3.5"></i> 15/05/2025</span>
+            <a href="#" class="text-blue-400 hover:text-blue-300 font-semibold inline-flex items-center gap-1 transition-colors">Ver detalhes <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></a>
+          </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="project-card saas bg-brand-darkCard border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/50 transition-all group flex flex-col justify-between">
+          <div>
+            <div class="h-48 bg-gradient-to-br from-purple-900/40 to-purple-600/20 flex items-center justify-center p-6 border-b border-white/5 relative overflow-hidden">
+              <div class="font-mono font-extrabold text-2xl text-purple-400 tracking-wider group-hover:scale-110 transition-transform duration-300 flex items-center gap-2">
+                <i data-lucide="bot" class="w-8 h-8"></i> CURSO.AI
+              </div>
+            </div>
+            <div class="p-6">
+              <span class="text-[10px] font-mono font-semibold text-blue-400 bg-blue-500/10 border border-blue-500/20 px-3 py-1 rounded-full">SaaS / Sistemas</span>
+              <h3 class="font-heading font-bold text-xl text-white mt-3">CursoAI Platform</h3>
+              <p class="text-gray-400 text-xs mt-2 leading-relaxed">Plataforma de aprendizado baseada em inteligência artificial para automação de cursos online.</p>
+            </div>
+          </div>
+          <div class="px-6 pb-6 pt-2 flex items-center justify-between border-t border-white/5 text-xs text-gray-500">
+            <span class="flex items-center gap-1"><i data-lucide="calendar" class="w-3.5 h-3.5"></i> 10/04/2025</span>
+            <a href="#" class="text-blue-400 hover:text-blue-300 font-semibold inline-flex items-center gap-1 transition-colors">Ver detalhes <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- PAGINAÇÃO -->
+      <div class="mt-16 flex items-center justify-center gap-2">
+        <button class="w-9 h-9 rounded-full bg-brand-darkCard border border-white/10 text-gray-400 flex items-center justify-center hover:bg-white/10 transition-all"><i data-lucide="chevron-left" class="w-4 h-4"></i></button>
+        <button class="w-9 h-9 rounded-full bg-blue-600 text-white font-bold text-xs flex items-center justify-center border border-blue-500">1</button>
+        <button class="w-9 h-9 rounded-full bg-brand-darkCard border border-white/10 text-gray-400 font-bold text-xs flex items-center justify-center hover:bg-white/10 transition-all">2</button>
+        <button class="w-9 h-9 rounded-full bg-brand-darkCard border border-white/10 text-gray-400 flex items-center justify-center hover:bg-white/10 transition-all"><i data-lucide="chevron-right" class="w-4 h-4"></i></button>
+      </div>
+
+      <!-- BANNER DE CTA -->
+      <div class="mt-20 bg-brand-darkCard border border-white/10 rounded-3xl p-8 sm:p-12 text-center relative overflow-hidden">
+        <div class="absolute -right-10 -bottom-10 w-60 h-60 bg-blue-600/10 rounded-full blur-3xl pointer-events-none"></div>
+        <h2 class="font-heading font-extrabold text-2xl sm:text-4xl text-white">Gostou do que viu?</h2>
+        <p class="text-gray-400 text-xs sm:text-sm mt-2 max-w-xl mx-auto">Vamos criar o próximo case de sucesso da sua empresa.</p>
+        <a href="../#contato" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs sm:text-sm px-8 py-4 rounded-xl mt-6 transition-all shadow-[0_0_20px_rgba(37,99,235,0.4)]">
+          Iniciar Projeto <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER ESTILO CODEPACCE -->
+  <footer class="bg-brand-black border-t border-white/10 pt-16 pb-12 px-6 text-gray-400 text-xs">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-white/10">
+      
+      <!-- Coluna 1: Sobre -->
+      <div class="space-y-4">
+        <img src="https://i.ibb.co/0ph5hPJL/logo-wiadigital-12.png" alt="WiaDigital" class="h-8 w-auto">
+        <p class="text-gray-400 leading-relaxed">Transformando ideias em software de alta performance. Excelência técnica e compromisso com o resultado.</p>
+        <div class="flex items-center gap-3 pt-2">
+          <a href="#" class="w-8 h-8 rounded-full bg-brand-darkCard border border-white/10 flex items-center justify-center hover:border-blue-500 text-gray-300 hover:text-white transition-all"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+          <a href="#" class="w-8 h-8 rounded-full bg-brand-darkCard border border-white/10 flex items-center justify-center hover:border-blue-500 text-gray-300 hover:text-white transition-all"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+          <a href="#" class="w-8 h-8 rounded-full bg-brand-darkCard border border-white/10 flex items-center justify-center hover:border-blue-500 text-gray-300 hover:text-white transition-all"><i data-lucide="github" class="w-4 h-4"></i></a>
+        </div>
+      </div>
+
+      <!-- Coluna 2: Soluções -->
+      <div>
+        <h4 class="font-heading font-bold text-white text-sm mb-4">Soluções</h4>
+        <ul class="space-y-2.5">
+          <li><a href="../#servicos" class="hover:text-blue-400 transition-colors">Desenvolvimento Web</a></li>
+          <li><a href="../#servicos" class="hover:text-blue-400 transition-colors">Aplicativos para Dispositivos Móveis</a></li>
+          <li><a href="../#servicos" class="hover:text-blue-400 transition-colors">Sistemas Sob Medida & Cloud</a></li>
+          <li><a href="../#servicos" class="hover:text-blue-400 transition-colors">Design & Branding</a></li>
+        </ul>
+      </div>
+
+      <!-- Coluna 3: Empresa -->
+      <div>
+        <h4 class="font-heading font-bold text-white text-sm mb-4">Empresa</h4>
+        <ul class="space-y-2.5">
+          <li><a href="../#inicio" class="hover:text-blue-400 transition-colors">Início</a></li>
+          <li><a href="../#processo" class="hover:text-blue-400 transition-colors">Nosso Processo</a></li>
+          <li><a href="./" class="hover:text-blue-400 transition-colors">Portfólio / Casos</a></li>
+          <li><a href="../#contato" class="hover:text-blue-400 transition-colors">Fale Conosco</a></li>
+        </ul>
+      </div>
+
+      <!-- Coluna 4: Contato -->
+      <div>
+        <h4 class="font-heading font-bold text-white text-sm mb-4">Contato</h4>
+        <ul class="space-y-3">
+          <li class="flex items-center gap-2.5"><i data-lucide="mail" class="w-4 h-4 text-blue-500"></i> contato@wiadigital.com.br</li>
+          <li class="flex items-center gap-2.5"><i data-lucide="message-circle" class="w-4 h-4 text-blue-500"></i> WhatsApp: (00) 00000-0000</li>
+          <li class="flex items-center gap-2.5"><i data-lucide="map-pin" class="w-4 h-4 text-blue-500"></i> Brasil & Portugal</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="max-w-7xl mx-auto pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-gray-500">
+      <p>© 2026 WiaDigital. Todos os direitos reservados.</p>
+      <div class="flex items-center gap-6">
+        <a href="#" class="hover:text-gray-400 transition-colors">Termos</a>
+        <a href="#" class="hover:text-gray-400 transition-colors">Privacidade</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+
+    // Lógica simples para os filtros da galeria
+    function filterProjects(category) {
+      const cards = document.querySelectorAll('.project-card');
+      const buttons = document.querySelectorAll('.filter-btn');
+
+      buttons.forEach(btn => {
+        btn.classList.remove('bg-blue-600', 'text-white', 'border-blue-500');
+        btn.classList.add('bg-brand-darkCard', 'text-gray-300', 'border-white/10');
+      });
+
+      event.target.classList.remove('bg-brand-darkCard', 'text-gray-300', 'border-white/10');
+      event.target.classList.add('bg-blue-600', 'text-white', 'border-blue-500');
+
+      cards.forEach(card => {
+        if (category === 'todos' || card.classList.contains(category)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
