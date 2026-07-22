@@ -68,13 +68,17 @@
 </head>
 <body class="font-sans antialiased bg-brand-black text-gray-100 selection:bg-blue-600 selection:text-white">
 
-  <!-- HEADER -->
-  <header class="fixed top-0 left-0 w-full z-50 bg-brand-black/90 backdrop-blur-md border-b border-white/10 py-4 px-6">
+  <!-- HEADER (LOGO EM DESTAQUE) -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-brand-black/90 backdrop-blur-md border-b border-white/10 py-3 px-6">
     <div class="max-w-7xl mx-auto flex items-center justify-between">
       
       <!-- LOGO -->
-      <a href="#" class="flex items-center gap-3">
-        <img src="https://i.ibb.co/0ph5hPJL/logo-wiadigital-12.png" alt="WiaDigital Tecnologia & Design" class="h-10 sm:h-12 w-auto object-contain">
+      <a href="#" class="flex items-center py-1">
+        <img 
+          src="letras brancas.png" 
+          alt="WiaDigital Tecnologia & Design" 
+          class="h-14 sm:h-16 md:h-20 w-auto object-contain scale-125 sm:scale-150 origin-left transition-transform duration-300"
+        />
       </a>
 
       <!-- NAVIGATION -->
@@ -97,7 +101,7 @@
   <!-- HERO SECTION (DARK + GRID + ELEMENTOS DE CÓDIGO FLUTUANTES) -->
   <section id="inicio" class="relative pt-36 pb-24 px-6 bg-brand-black bg-grid-pattern overflow-hidden min-h-[90vh] flex items-center">
     
-    <!-- SÍMBOLOS E ÍCONES FLUTUANTES NO BACKGROUND (INTERATIVOS) -->
+    <!-- SÍMBOLOS E ÍCONES FLUTUANTES NO BACKGROUND -->
     <div class="absolute inset-0 pointer-events-none z-0 overflow-hidden">
       
       <!-- Icon 1: </> (Topo Esquerdo) -->
@@ -153,7 +157,7 @@
         </div>
       </div>
 
-      <!-- Lado Direito: Cards de Métricas (Estilo Branapi) -->
+      <!-- Lado Direito: Cards de Métricas -->
       <div class="lg:col-span-5 space-y-4">
         <!-- Card 1 -->
         <div class="bg-brand-darkCard/90 backdrop-blur-md border border-white/10 p-6 rounded-2xl flex items-center gap-5 hover:border-blue-500/40 transition-all">
@@ -188,16 +192,16 @@
     <div class="max-w-7xl mx-auto px-6 text-center">
       <p class="text-gray-400 text-xs font-semibold tracking-widest uppercase mb-6">EMPRESAS QUE CONFIAM NA WIADIGITAL</p>
       <div class="flex flex-wrap items-center justify-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all">
-        <span class="font-heading font-extrabold text-xl text-gray-800">Wianet Telecom</span>
-        <span class="font-heading font-extrabold text-xl text-gray-800">Gauchos Telecom</span>
-        <span class="font-heading font-extrabold text-xl text-gray-800">WiaFibra</span>
-        <span class="font-heading font-extrabold text-xl text-gray-800">WiaGeo</span>
-        <span class="font-heading font-extrabold text-xl text-gray-800">WiaPonto</span>
+        <span class="font-heading font-extrabold text-xl text-gray-800">DOCWEB</span>
+        <span class="font-heading font-extrabold text-xl text-gray-800">SKS VIAGENS</span>
+        <span class="font-heading font-extrabold text-xl text-gray-800">ANÚNCIO DE VAGAS</span>
+        <span class="font-heading font-extrabold text-xl text-gray-800">MOVVA</span>
+        <span class="font-heading font-extrabold text-xl text-gray-800">WIAFIBRA</span>
       </div>
     </div>
   </section>
 
-  <!-- SERVIÇOS (FUNDO BRANCO/OFF-WHITE ESTILO BRANAPI) -->
+  <!-- SERVIÇOS (APENAS OS 4 PRINCIPAIS) -->
   <section id="servicos" class="py-24 px-6 bg-brand-lightBg text-gray-900">
     <div class="max-w-7xl mx-auto">
       
@@ -211,68 +215,58 @@
         </p>
       </div>
 
-      <!-- Grid de Serviços estilo Cards Arredondados Off-white -->
-      <div class="grid md:grid-cols-3 gap-8">
+      <!-- Grid de 4 Serviços Organizados -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
         
-        <!-- Card 1 -->
-        <div class="bg-brand-lightCard border border-gray-200 p-8 rounded-3xl shadow-sm hover:shadow-md hover:border-blue-500/50 transition-all">
-          <div class="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center text-blue-600 mb-6">
-            <i data-lucide="code-2" class="w-6 h-6"></i>
+        <!-- Card 1: Desenvolvimento de Software -->
+        <div class="bg-brand-lightCard border border-gray-200 p-8 rounded-3xl shadow-sm hover:shadow-md hover:border-blue-500/50 transition-all flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center text-blue-600 mb-6">
+              <i data-lucide="code-2" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-heading font-bold text-xl text-gray-900 mb-3">Desenvolvimento de Software</h3>
+            <p class="text-gray-600 text-xs sm:text-sm leading-relaxed">Sistemas sob medida, ERPs, CRMs e plataformas web escaláveis com as melhores tecnologias do mercado.</p>
           </div>
-          <h3 class="font-heading font-bold text-xl text-gray-900 mb-3">Desenvolvimento de Software</h3>
-          <p class="text-gray-600 text-xs sm:text-sm leading-relaxed">Sistemas sob medida, ERPs, CRMs e plataformas web escaláveis com as melhores tecnologias do mercado.</p>
         </div>
 
-        <!-- Card 2 -->
-        <div class="bg-brand-lightCard border border-gray-200 p-8 rounded-3xl shadow-sm hover:shadow-md hover:border-blue-500/50 transition-all">
-          <div class="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center text-blue-600 mb-6">
-            <i data-lucide="globe" class="w-6 h-6"></i>
+        <!-- Card 2: Desenvolvimento de Sites -->
+        <div class="bg-brand-lightCard border border-gray-200 p-8 rounded-3xl shadow-sm hover:shadow-md hover:border-blue-500/50 transition-all flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center text-blue-600 mb-6">
+              <i data-lucide="globe" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-heading font-bold text-xl text-gray-900 mb-3">Desenvolvimento de Sites</h3>
+            <p class="text-gray-600 text-xs sm:text-sm leading-relaxed">Sites institucionais, landing pages e e-commerces otimizados para SEO e alta conversão.</p>
           </div>
-          <h3 class="font-heading font-bold text-xl text-gray-900 mb-3">Desenvolvimento de Sites</h3>
-          <p class="text-gray-600 text-xs sm:text-sm leading-relaxed">Sites institucionais, landing pages e e-commerces otimizados para SEO e alta conversão.</p>
         </div>
 
-        <!-- Card 3 -->
-        <div class="bg-brand-lightCard border border-gray-200 p-8 rounded-3xl shadow-sm hover:shadow-md hover:border-blue-500/50 transition-all">
-          <div class="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center text-blue-600 mb-6">
-            <i data-lucide="smartphone" class="w-6 h-6"></i>
+        <!-- Card 3: Aplicativos Mobile -->
+        <div class="bg-brand-lightCard border border-gray-200 p-8 rounded-3xl shadow-sm hover:shadow-md hover:border-blue-500/50 transition-all flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center text-blue-600 mb-6">
+              <i data-lucide="smartphone" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-heading font-bold text-xl text-gray-900 mb-3">Aplicativos Mobile</h3>
+            <p class="text-gray-600 text-xs sm:text-sm leading-relaxed">Apps nativos e híbridos para iOS e Android com design intuitivo e performance superior.</p>
           </div>
-          <h3 class="font-heading font-bold text-xl text-gray-900 mb-3">Aplicativos Mobile</h3>
-          <p class="text-gray-600 text-xs sm:text-sm leading-relaxed">Apps nativos e híbridos para iOS e Android com design intuitivo e performance superior.</p>
         </div>
 
-        <!-- Card 4 -->
-        <div class="bg-brand-lightCard border border-gray-200 p-8 rounded-3xl shadow-sm hover:shadow-md hover:border-blue-500/50 transition-all">
-          <div class="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center text-blue-600 mb-6">
-            <i data-lucide="database" class="w-6 h-6"></i>
+        <!-- Card 4: Design Gráfico & Social Media -->
+        <div class="bg-brand-lightCard border border-gray-200 p-8 rounded-3xl shadow-sm hover:shadow-md hover:border-blue-500/50 transition-all flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center text-blue-600 mb-6">
+              <i data-lucide="palette" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-heading font-bold text-xl text-gray-900 mb-3">Design Gráfico & Social Media</h3>
+            <p class="text-gray-600 text-xs sm:text-sm leading-relaxed">Identidades visuais, artes para redes sociais, criativos de anúncios e branding de alto padrão.</p>
           </div>
-          <h3 class="font-heading font-bold text-xl text-gray-900 mb-3">Sistemas e APIs</h3>
-          <p class="text-gray-600 text-xs sm:text-sm leading-relaxed">Integrações, APIs RESTful, microsserviços e arquiteturas escaláveis na nuvem.</p>
-        </div>
-
-        <!-- Card 5 -->
-        <div class="bg-brand-lightCard border border-gray-200 p-8 rounded-3xl shadow-sm hover:shadow-md hover:border-blue-500/50 transition-all">
-          <div class="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center text-blue-600 mb-6">
-            <i data-lucide="zap" class="w-6 h-6"></i>
-          </div>
-          <h3 class="font-heading font-bold text-xl text-gray-900 mb-3">Automação de Processos</h3>
-          <p class="text-gray-600 text-xs sm:text-sm leading-relaxed">Automatize tarefas repetitivas e aumente a produtividade com soluções inteligentes.</p>
-        </div>
-
-        <!-- Card 6 -->
-        <div class="bg-brand-lightCard border border-gray-200 p-8 rounded-3xl shadow-sm hover:shadow-md hover:border-blue-500/50 transition-all">
-          <div class="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center text-blue-600 mb-6">
-            <i data-lucide="palette" class="w-6 h-6"></i>
-          </div>
-          <h3 class="font-heading font-bold text-xl text-gray-900 mb-3">Design Gráfico & Social Media</h3>
-          <p class="text-gray-600 text-xs sm:text-sm leading-relaxed">Identidades visuais, artes para redes sociais, criativos de anúncios e branding de alto padrão.</p>
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- NOSSO PROCESSO (DARK ESTILO BRANAPI COM LINHA DO TEMPO) -->
+  <!-- NOSSO PROCESSO -->
   <section id="processo" class="py-24 px-6 bg-brand-black text-white relative">
     <div class="max-w-5xl mx-auto">
       
@@ -328,7 +322,7 @@
     </div>
   </section>
 
-  <!-- SEÇÃO PORTFÓLIO (FUNDO CLARO) -->
+  <!-- SEÇÃO PORTFÓLIO -->
   <section id="portfolio" class="py-24 px-6 bg-brand-lightBg text-gray-900 border-t border-gray-200">
     <div class="max-w-7xl mx-auto">
       <div class="text-center max-w-2xl mx-auto mb-16">
@@ -376,7 +370,7 @@
     </div>
   </section>
 
-  <!-- CTA FINAL CONTATO (DARK) -->
+  <!-- CTA FINAL CONTATO -->
   <section id="contato" class="py-24 px-6 bg-brand-black text-center relative">
     <div class="max-w-3xl mx-auto">
       <span class="text-blue-500 font-mono text-xs uppercase tracking-widest font-bold">CONTATO</span>
@@ -401,7 +395,7 @@
   <!-- FOOTER -->
   <footer class="bg-brand-black border-t border-white/10 py-10 px-6 text-gray-500 text-xs">
     <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
-      <img src="https://i.ibb.co/0ph5hPJL/logo-wiadigital-12.png" alt="WiaDigital" class="h-8 w-auto">
+      <img src="letras brancas.png" alt="WiaDigital" class="h-8 w-auto">
       <p>© 2026 WiaDigital. Todos os direitos reservados.</p>
     </div>
   </footer>
@@ -435,7 +429,6 @@
         });
       });
 
-      // Volta suavemente ao centro quando o mouse sai da seção
       heroSection.addEventListener('mouseleave', () => {
         floatingElements.forEach((el) => {
           el.style.transform = `translate(0px, 0px)`;
