@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Consultoria Gratuita | WiaDigital</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            heading: ['Plus Jakarta Sans', 'sans-serif'],
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: { brand: { black: '#07090E', darkCard: '#111622', blue: '#2563EB' } }
+        }
+      }
+    }
+  </script>
+  <style>
+    .bg-grid-pattern {
+      background-size: 40px 40px;
+      background-image: linear-gradient(to right, rgba(37, 99, 235, 0.07) 1px, transparent 1px), linear-gradient(to bottom, rgba(37, 99, 235, 0.07) 1px, transparent 1px);
+    }
+  </style>
+</head>
+<body class="font-sans antialiased bg-brand-black text-gray-100 flex flex-col min-h-screen">
+
+  <header class="fixed top-0 left-0 w-full z-50 bg-brand-black/90 backdrop-blur-md border-b border-white/10 py-3 px-6">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <a href="/"><img src="https://i.ibb.co/0ph5hPJL/logo-wiadigital-12.png" alt="WiaDigital" class="h-10 sm:h-12 w-auto object-contain" /></a>
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300">
+        <a href="/sobre" class="hover:text-blue-400 transition-colors">Sobre</a>
+        <a href="/servicos" class="hover:text-blue-400 transition-colors">Serviços</a>
+        <a href="/portfolio" class="hover:text-blue-400 transition-colors">Portfólio</a>
+        <a href="/consultoria-gratuita" class="text-blue-400 font-semibold border-b-2 border-blue-500 pb-1">Consultoria Gratuita</a>
+      </nav>
+      <a href="/consultoria-gratuita" class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs sm:text-sm px-6 py-3 rounded-xl transition-all shadow-[0_0_20px_rgba(37,99,235,0.4)]">Solicitar Orçamento</a>
+    </div>
+  </header>
+
+  <section class="pt-36 pb-12 px-6 bg-grid-pattern">
+    <div class="max-w-4xl mx-auto text-center">
+      <span class="text-xs font-mono font-semibold text-blue-400 bg-blue-500/10 border border-blue-500/20 px-4 py-1.5 rounded-full">FALE COM UM ESPECIALISTA</span>
+      <h1 class="font-heading font-extrabold text-4xl sm:text-6xl text-white mt-6 tracking-tight">Agende sua <span class="text-blue-500">Consultoria Gratuita</span></h1>
+      <p class="mt-4 text-gray-400 text-sm sm:text-base max-w-2xl mx-auto">Analisaremos a sua ideia ou software atual e apresentaremos o melhor caminho tecnológico sem custo.</p>
+    </div>
+  </section>
+
+  <section class="py-12 px-6 bg-brand-black flex-grow">
+    <div class="max-w-3xl mx-auto bg-brand-darkCard border border-white/10 p-8 sm:p-12 rounded-3xl relative">
+      <form class="space-y-6">
+        <div>
+          <label class="block text-xs font-medium text-gray-300 mb-2">Nome Completo</label>
+          <input type="text" placeholder="Seu nome" class="w-full bg-brand-black border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500 transition-colors" required>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-6">
+          <div>
+            <label class="block text-xs font-medium text-gray-300 mb-2">E-mail corporativo ou pessoal</label>
+            <input type="email" placeholder="seu@email.com" class="w-full bg-brand-black border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500 transition-colors" required>
+          </div>
+          <div>
+            <label class="block text-xs font-medium text-gray-300 mb-2">WhatsApp</label>
+            <input type="tel" placeholder="(00) 00000-0000" class="w-full bg-brand-black border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500 transition-colors" required>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-medium text-gray-300 mb-2">Sobre o seu projeto</label>
+          <textarea rows="4" placeholder="Conte brevemente o que você precisa desenvolver..." class="w-full bg-brand-black border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500 transition-colors" required></textarea>
+        </div>
+
+        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold text-sm py-4 rounded-xl transition-all shadow-[0_0_20px_rgba(37,99,235,0.4)] flex items-center justify-center gap-2">
+          Enviar Solicitação <i data-lucide="send" class="w-4 h-4"></i>
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="bg-brand-black border-t border-white/10 py-8 px-6 text-center text-xs text-gray-500">
+    <p>© 2026 WiaDigital. Todos os direitos reservados.</p>
+  </footer>
+  <script>lucide.createIcons();</script>
+</body>
+</html>
