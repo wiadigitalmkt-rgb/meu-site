@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Política de Cookies | WiaDigital</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { heading: ['Plus Jakarta Sans', 'sans-serif'], sans: ['Inter', 'sans-serif'] },
+          colors: { brand: { black: '#07090E', darkCard: '#111622', blue: '#2563EB' } }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="font-sans antialiased bg-brand-black text-gray-100 selection:bg-blue-600 selection:text-white flex flex-col min-h-screen">
+
+  <header class="fixed top-0 left-0 w-full z-50 bg-brand-black/90 backdrop-blur-md border-b border-white/10 py-3 px-6">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <a href="/" class="flex items-center py-1">
+        <img src="https://i.ibb.co/0ph5hPJL/logo-wiadigital-12.png" alt="WiaDigital" class="h-10 w-auto" />
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300">
+        <a href="/" class="hover:text-blue-400 transition-colors">Início</a>
+        <a href="/sobre" class="hover:text-blue-400 transition-colors">Sobre</a>
+        <a href="/servicos" class="hover:text-blue-400 transition-colors">Serviços</a>
+        <a href="/portfolio" class="hover:text-blue-400 transition-colors">Portfólio</a>
+      </nav>
+      <div>
+        <a href="https://wa.me/5551989019193" target="_blank" class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs sm:text-sm px-6 py-3 rounded-xl transition-all shadow-[0_0_20px_rgba(37,99,235,0.4)]">
+          Contato
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-grow pt-32 pb-20 px-6">
+    <div class="max-w-4xl mx-auto bg-brand-darkCard border border-white/10 rounded-3xl p-8 sm:p-12 shadow-2xl">
+      <span class="text-blue-500 font-mono text-xs uppercase tracking-widest font-bold">NAVEGAÇÃO E NAVEGABILIDADE</span>
+      <h1 class="font-heading font-extrabold text-3xl sm:text-5xl text-white mt-2 mb-8">Política de Cookies</h1>
+
+      <div class="space-y-6 text-gray-300 text-sm sm:text-base leading-relaxed">
+        <p>A <strong>WiaDigital</strong> utiliza cookies e tecnologias semelhantes para garantir o funcionamento adequado do nosso site, melhorar a sua experiência de navegação e analisar o tráfego da página.</p>
+
+        <h2 class="font-heading font-bold text-xl text-white pt-4">1. O que são Cookies?</h2>
+        <p>Cookies são pequenos arquivos de texto armazenados no seu dispositivo (computador ou celular) ao visitar um site. Eles ajudam a lembrar de suas preferências e otimizar o desempenho da plataforma.</p>
+
+        <h2 class="font-heading font-bold text-xl text-white pt-4">2. Tipos de Cookies que Utilizamos</h2>
+        <ul class="list-disc pl-6 space-y-2 text-gray-400">
+          <li><strong>Cookies Necessários:</strong> Essenciais para o funcionamento básico do site e segurança da plataforma.</li>
+          <li><strong>Cookies de Desempenho e Métricas:</strong> Nos ajudam a compreender como os visitantes interagem com o site, permitindo aprimorar a usabilidade.</li>
+        </ul>
+
+        <h2 class="font-heading font-bold text-xl text-white pt-4">3. Gerenciamento de Cookies</h2>
+        <p>Você pode alterar ou desativar os cookies diretamente nas configurações do seu navegador a qualquer momento. Note que desativar certos cookies pode afetar o desempenho de algumas funções do site.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-black border-t border-white/10 py-6 text-center text-xs text-gray-500">
+    <p>© 2026 WiaDigital. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>
