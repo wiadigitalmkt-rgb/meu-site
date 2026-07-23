@@ -32,19 +32,21 @@
 </head>
 <body class="font-sans antialiased bg-brand-black text-gray-100 flex flex-col min-h-screen">
 
+  <!-- HEADER -->
   <header class="fixed top-0 left-0 w-full z-50 bg-brand-black/90 backdrop-blur-md border-b border-white/10 py-3 px-6">
     <div class="max-w-7xl mx-auto flex items-center justify-between">
       <a href="/"><img src="https://i.ibb.co/0ph5hPJL/logo-wiadigital-12.png" alt="WiaDigital" class="h-10 sm:h-12 w-auto object-contain" /></a>
       <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300">
-  <a href="/sobre" class="hover:text-blue-400 transition-colors">Sobre</a>
-  <a href="/servicos" class="hover:text-blue-400 transition-colors">Serviços</a>
-  <a href="/portfolio" class="hover:text-blue-400 transition-colors">Portfólio</a>
-  <a href="/gratuita" class="text-blue-400 font-semibold border-b-2 border-blue-500 pb-1">Consultoria Gratuita</a>
-</nav>
+        <a href="/sobre" class="hover:text-blue-400 transition-colors">Sobre</a>
+        <a href="/servicos" class="hover:text-blue-400 transition-colors">Serviços</a>
+        <a href="/portfolio" class="hover:text-blue-400 transition-colors">Portfólio</a>
+        <a href="/gratuita" class="text-blue-400 font-semibold border-b-2 border-blue-500 pb-1">Consultoria Gratuita</a>
+      </nav>
       <a href="/gratuita" class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs sm:text-sm px-6 py-3 rounded-xl transition-all shadow-[0_0_20px_rgba(37,99,235,0.4)]">Solicitar Orçamento</a>
     </div>
   </header>
 
+  <!-- HERO -->
   <section class="pt-36 pb-12 px-6 bg-grid-pattern">
     <div class="max-w-4xl mx-auto text-center">
       <span class="text-xs font-mono font-semibold text-blue-400 bg-blue-500/10 border border-blue-500/20 px-4 py-1.5 rounded-full">FALE COM UM ESPECIALISTA</span>
@@ -53,6 +55,7 @@
     </div>
   </section>
 
+  <!-- FORMULÁRIO -->
   <section class="py-12 px-6 bg-brand-black flex-grow">
     <div class="max-w-3xl mx-auto bg-brand-darkCard border border-white/10 p-8 sm:p-12 rounded-3xl relative">
       <form class="space-y-6">
@@ -84,9 +87,84 @@
     </div>
   </section>
 
-  <footer class="bg-brand-black border-t border-white/10 py-8 px-6 text-center text-xs text-gray-500">
-    <p>© 2026 WiaDigital. Todos os direitos reservados.</p>
+  <!-- FOOTER -->
+  <footer class="bg-black border-t border-white/10 pt-16 pb-8 px-6 text-gray-400 text-sm mt-auto">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 gap-8 md:gap-10 pb-12">
+      <div class="md:col-span-4 space-y-5">
+        <a href="#" class="inline-block">
+          <img src="https://i.ibb.co/0ph5hPJL/logo-wiadigital-12.png" alt="WiaDigital" class="h-9 w-auto">
+        </a>
+        <p class="text-xs text-gray-400 leading-relaxed pr-4">
+          Evoluímos suas ideias em softwares potentes e experiências marcantes. Qualidade técnica e soluções que geram valor de verdade.
+        </p>
+        <div class="flex items-center gap-3 pt-2">
+          <a href="#" class="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:border-blue-500 transition-all bg-white/5">
+            <i data-lucide="facebook" class="w-3.5 h-3.5"></i>
+          </a>
+          <a href="#" class="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:border-blue-500 transition-all bg-white/5">
+            <i data-lucide="instagram" class="w-3.5 h-3.5"></i>
+          </a>
+          <a href="#" class="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:border-blue-500 transition-all bg-white/5">
+            <i data-lucide="linkedin" class="w-3.5 h-3.5"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="md:col-span-3">
+        <h4 class="font-heading font-bold text-white text-base mb-4">Soluções</h4>
+        <ul class="space-y-3 text-xs">
+          <li><a href="/servicos" class="flex items-center gap-2 hover:text-blue-400 transition-colors"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span> Desenvolvimento de Software</a></li>
+          <li><a href="/servicos" class="flex items-center gap-2 hover:text-blue-400 transition-colors"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span> Desenvolvimento de sites</a></li>
+          <li><a href="/servicos" class="flex items-center gap-2 hover:text-blue-400 transition-colors"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span> Aplicativos Mobile</a></li>
+          <li><a href="/servicos" class="flex items-center gap-2 hover:text-blue-400 transition-colors"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span> Design Gráfico & Social Media</a></li>
+        </ul>
+      </div>
+
+      <div class="md:col-span-2">
+        <h4 class="font-heading font-bold text-white text-base mb-4">Empresa</h4>
+        <ul class="space-y-3 text-xs">
+          <li><a href="/sobre" class="hover:text-blue-400 transition-colors">Sobre Nós</a></li>
+          <li><a href="/portfolio" class="hover:text-blue-400 transition-colors">Cases</a></li>
+          <li><a href="/servicos" class="hover:text-blue-400 transition-colors">Produtos</a></li>
+          <li><a href="/gratuita" class="hover:text-blue-400 transition-colors">Fale Conosco</a></li>
+        </ul>
+      </div>
+
+      <div class="md:col-span-3 space-y-3">
+        <h4 class="font-heading font-bold text-white text-base mb-4">Contato</h4>
+        <div class="bg-white/5 border border-white/10 rounded-xl p-3 flex items-center gap-3 overflow-hidden">
+          <div class="w-8 h-8 rounded-lg bg-blue-600/20 text-blue-400 flex items-center justify-center shrink-0">
+            <i data-lucide="mail" class="w-4 h-4"></i>
+          </div>
+          <span class="text-xs text-gray-300 truncate min-w-0" title="contato@wiadigital.com.br">contato@wiadigital.com.br</span>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-xl p-3 flex items-center gap-3 overflow-hidden">
+          <div class="w-8 h-8 rounded-lg bg-blue-600/20 text-blue-400 flex items-center justify-center shrink-0">
+            <i data-lucide="phone" class="w-4 h-4"></i>
+          </div>
+          <span class="text-xs text-gray-300 truncate min-w-0">WhatsApp: (051) 98901-9193</span>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-xl p-3 flex items-center gap-3 overflow-hidden">
+          <div class="w-8 h-8 rounded-lg bg-blue-600/20 text-blue-400 flex items-center justify-center shrink-0">
+            <i data-lucide="map-pin" class="w-4 h-4"></i>
+          </div>
+          <span class="text-xs text-gray-300 truncate min-w-0">Viamão/RS</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto border-t border-white/10 pt-6 flex flex-col md:flex-row items-center justify-between text-xs text-gray-500 gap-4">
+      <p>© 2026 WiaDigital. Todos os direitos reservados.</p>
+      <div class="flex flex-wrap items-center gap-6 text-gray-400">
+        <a href="#" class="hover:text-white transition-colors">Termos</a>
+        <a href="#" class="hover:text-white transition-colors">Privacidade</a>
+        <a href="#" class="hover:text-white transition-colors">Cookies</a>
+        <a href="#" class="hover:text-white transition-colors">LGPD</a>
+        <a href="#" class="hover:text-white transition-colors">Exclusão de dados</a>
+      </div>
+    </div>
   </footer>
+
   <script>lucide.createIcons();</script>
 </body>
 </html>
