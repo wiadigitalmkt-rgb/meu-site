@@ -42,7 +42,7 @@
   </script>
 
   <style>
-    /* Mesh Grid Background estilo Branapi */
+    /* Mesh Grid Background */
     .bg-grid-pattern {
       background-size: 40px 40px;
       background-image: 
@@ -50,7 +50,7 @@
         linear-gradient(to bottom, rgba(37, 99, 235, 0.07) 1px, transparent 1px);
     }
 
-    /* Keyframes para animação contínua de flutuação */
+    /* Keyframes para animação contínua de flutuação no Hero */
     @keyframes floatSlow {
       0%, 100% { transform: translateY(0px) rotate(0deg); }
       50% { transform: translateY(-15px) rotate(3deg); }
@@ -64,6 +64,22 @@
     .animate-float-1 { animation: floatSlow 8s ease-in-out infinite; }
     .animate-float-2 { animation: floatFast 6s ease-in-out infinite; }
     .animate-float-3 { animation: floatSlow 10s ease-in-out infinite; }
+
+    /* ANIMAÇÃO DE CARROSSEL INFINITO (MARQUEE) */
+    @keyframes infiniteScroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .animate-marquee {
+      display: flex;
+      width: max-content;
+      animation: infiniteScroll 25s linear infinite;
+    }
+
+    .animate-marquee:hover {
+      animation-play-state: paused;
+    }
   </style>
 </head>
 <body class="font-sans antialiased bg-brand-black text-gray-100 selection:bg-blue-600 selection:text-white">
@@ -166,16 +182,27 @@
     </div>
   </section>
 
-  <!-- PARCEIROS -->
-  <section class="py-10 bg-white border-y border-gray-200">
-    <div class="max-w-7xl mx-auto px-6 text-center">
-      <p class="text-gray-400 text-xs font-semibold tracking-widest uppercase mb-6">EMPRESAS QUE CONFIAM NA WIADIGITAL</p>
-      <div class="flex flex-wrap items-center justify-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all">
-        <span class="font-heading font-extrabold text-xl text-gray-800">Gauchos Telecom</span>
-        <span class="font-heading font-extrabold text-xl text-gray-800">Wianet Telecom</span>
-        <span class="font-heading font-extrabold text-xl text-gray-800">WiaFibra</span>
-        <span class="font-heading font-extrabold text-xl text-gray-800">WiaGeo</span>
-        <span class="font-heading font-extrabold text-xl text-gray-800">WiaPonto</span>
+  <!-- PARCEIROS (COM ROLAGEM INFINITA - MARQUEE) -->
+  <section class="py-10 bg-white border-y border-gray-200 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 text-center mb-6">
+      <p class="text-gray-400 text-xs font-semibold tracking-widest uppercase">EMPRESAS QUE CONFIAM NA WIADIGITAL</p>
+    </div>
+    
+    <div class="w-full overflow-hidden flex items-center">
+      <div class="animate-marquee gap-12 md:gap-20 items-center opacity-70">
+        <!-- Grupo 1 -->
+        <span class="font-heading font-extrabold text-xl md:text-2xl text-gray-800 whitespace-nowrap">Gauchos Telecom</span>
+        <span class="font-heading font-extrabold text-xl md:text-2xl text-gray-800 whitespace-nowrap">Wianet Telecom</span>
+        <span class="font-heading font-extrabold text-xl md:text-2xl text-gray-800 whitespace-nowrap">WiaFibra</span>
+        <span class="font-heading font-extrabold text-xl md:text-2xl text-gray-800 whitespace-nowrap">WiaGeo</span>
+        <span class="font-heading font-extrabold text-xl md:text-2xl text-gray-800 whitespace-nowrap">WiaPonto</span>
+
+        <!-- Grupo 2 (Duplicado para efeito Infinito contínuo) -->
+        <span class="font-heading font-extrabold text-xl md:text-2xl text-gray-800 whitespace-nowrap">Gauchos Telecom</span>
+        <span class="font-heading font-extrabold text-xl md:text-2xl text-gray-800 whitespace-nowrap">Wianet Telecom</span>
+        <span class="font-heading font-extrabold text-xl md:text-2xl text-gray-800 whitespace-nowrap">WiaFibra</span>
+        <span class="font-heading font-extrabold text-xl md:text-2xl text-gray-800 whitespace-nowrap">WiaGeo</span>
+        <span class="font-heading font-extrabold text-xl md:text-2xl text-gray-800 whitespace-nowrap">WiaPonto</span>
       </div>
     </div>
   </section>
@@ -308,11 +335,99 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="bg-brand-black border-t border-white/10 py-10 px-6 text-gray-500 text-xs">
-    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
-      <img src="https://i.ibb.co/0ph5hPJL/logo-wiadigital-12.png" alt="WiaDigital" class="h-8 w-auto">
+  <!-- NOVO RODAPÉ (IGUAL AO PRINT) -->
+  <footer class="bg-black border-t border-white/10 pt-16 pb-8 px-6 text-gray-400 text-sm">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-10 pb-12">
+      
+      <!-- Coluna 1: Logo, Descrição e Redes Sociais -->
+      <div class="md:col-span-4 space-y-5">
+        <a href="#" class="inline-block">
+          <img src="https://i.ibb.co/0ph5hPJL/logo-wiadigital-12.png" alt="WiaDigital" class="h-9 w-auto">
+        </a>
+        <p class="text-xs text-gray-400 leading-relaxed pr-4">
+          Transformando ideias em software de alta performance. Excelência técnica e compromisso com o resultado.
+        </p>
+        <!-- Ícones Sociais Redondos -->
+        <div class="flex items-center gap-3 pt-2">
+          <a href="#" class="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:border-blue-500 transition-all bg-white/5">
+            <i data-lucide="facebook" class="w-3.5 h-3.5"></i>
+          </a>
+          <a href="#" class="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:border-blue-500 transition-all bg-white/5">
+            <i data-lucide="instagram" class="w-3.5 h-3.5"></i>
+          </a>
+          <a href="#" class="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:border-blue-500 transition-all bg-white/5">
+            <i data-lucide="linkedin" class="w-3.5 h-3.5"></i>
+          </a>
+          <a href="#" class="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:border-blue-500 transition-all bg-white/5">
+            <i data-lucide="twitter" class="w-3.5 h-3.5"></i>
+          </a>
+          <a href="#" class="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:border-blue-500 transition-all bg-white/5">
+            <i data-lucide="github" class="w-3.5 h-3.5"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Coluna 2: Soluções -->
+      <div class="md:col-span-3">
+        <h4 class="font-heading font-bold text-white text-base mb-4">Soluções</h4>
+        <ul class="space-y-3 text-xs">
+          <li><a href="/servicos" class="flex items-center gap-2 hover:text-blue-400 transition-colors"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span> Desenvolvimento Web</a></li>
+          <li><a href="/servicos" class="flex items-center gap-2 hover:text-blue-400 transition-colors"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span> Apps Mobile</a></li>
+          <li><a href="/servicos" class="flex items-center gap-2 hover:text-blue-400 transition-colors"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span> Sistemas Sob Medida</a></li>
+          <li><a href="/servicos" class="flex items-center gap-2 hover:text-blue-400 transition-colors"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span> Consultoria Técnica</a></li>
+        </ul>
+      </div>
+
+      <!-- Coluna 3: Empresa -->
+      <div class="md:col-span-2">
+        <h4 class="font-heading font-bold text-white text-base mb-4">Empresa</h4>
+        <ul class="space-y-3 text-xs">
+          <li><a href="/sobre" class="hover:text-blue-400 transition-colors">Sobre Nós</a></li>
+          <li><a href="/portfolio" class="hover:text-blue-400 transition-colors">Cases</a></li>
+          <li><a href="/servicos" class="hover:text-blue-400 transition-colors">Produtos</a></li>
+          <li><a href="#contato" class="hover:text-blue-400 transition-colors">Fale Conosco</a></li>
+        </ul>
+      </div>
+
+      <!-- Coluna 4: Contato (Cards Estilo Print) -->
+      <div class="md:col-span-3 space-y-3">
+        <h4 class="font-heading font-bold text-white text-base mb-4">Contato</h4>
+        
+        <div class="bg-white/5 border border-white/10 rounded-xl p-3 flex items-center gap-3">
+          <div class="w-8 h-8 rounded-lg bg-blue-600/20 text-blue-400 flex items-center justify-center shrink-0">
+            <i data-lucide="mail" class="w-4 h-4"></i>
+          </div>
+          <span class="text-xs text-gray-300">contato@wiadigital.com.br</span>
+        </div>
+
+        <div class="bg-white/5 border border-white/10 rounded-xl p-3 flex items-center gap-3">
+          <div class="w-8 h-8 rounded-lg bg-blue-600/20 text-blue-400 flex items-center justify-center shrink-0">
+            <i data-lucide="phone" class="w-4 h-4"></i>
+          </div>
+          <span class="text-xs text-gray-300">WhatsApp: (00) 00000-0000</span>
+        </div>
+
+        <div class="bg-white/5 border border-white/10 rounded-xl p-3 flex items-center gap-3">
+          <div class="w-8 h-8 rounded-lg bg-blue-600/20 text-blue-400 flex items-center justify-center shrink-0">
+            <i data-lucide="map-pin" class="w-4 h-4"></i>
+          </div>
+          <span class="text-xs text-gray-300">Brasil</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Barra Inferior -->
+    <div class="max-w-7xl mx-auto border-t border-white/10 pt-6 flex flex-col md:flex-row items-center justify-between text-xs text-gray-500 gap-4">
       <p>© 2026 WiaDigital. Todos os direitos reservados.</p>
+      
+      <div class="flex flex-wrap items-center gap-6 text-gray-400">
+        <a href="#" class="hover:text-white transition-colors">Termos</a>
+        <a href="#" class="hover:text-white transition-colors">Privacidade</a>
+        <a href="#" class="hover:text-white transition-colors">Cookies</a>
+        <a href="#" class="hover:text-white transition-colors">LGPD</a>
+        <a href="#" class="hover:text-white transition-colors">Exclusão de dados</a>
+      </div>
     </div>
   </footer>
 
