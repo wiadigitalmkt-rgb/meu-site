@@ -18,15 +18,7 @@
             sans: ['Inter', 'sans-serif'],
             mono: ['JetBrains Mono', 'monospace'],
           },
-          colors: {
-            brand: { 
-              black: '#07090E', 
-              darkCard: '#111622', 
-              cardBorder: '#1E2638',
-              blue: '#2563EB',
-              blueHover: '#1D4ED8'
-            }
-          }
+          colors: { brand: { black: '#07090E', darkCard: '#111622', blue: '#2563EB' } }
         }
       }
     }
@@ -34,7 +26,7 @@
   <style>
     .bg-grid-pattern {
       background-size: 40px 40px;
-      background-image: linear-gradient(to right, rgba(37, 99, 235, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(37, 99, 235, 0.05) 1px, transparent 1px);
+      background-image: linear-gradient(to right, rgba(37, 99, 235, 0.07) 1px, transparent 1px), linear-gradient(to bottom, rgba(37, 99, 235, 0.07) 1px, transparent 1px);
     }
   </style>
 </head>
@@ -46,243 +38,160 @@
       <a href="/" class="flex items-center py-1">
         <img src="https://i.ibb.co/0ph5hPJL/logo-wiadigital-12.png" alt="WiaDigital" class="h-10 sm:h-12 w-auto object-contain" />
       </a>
-
       <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300">
         <a href="/sobre" class="hover:text-blue-400 transition-colors">Sobre</a>
         <a href="/servicos" class="hover:text-blue-400 transition-colors">Serviços</a>
         <a href="/portfolio" class="text-blue-400 font-semibold border-b-2 border-blue-500 pb-1">Portfólio</a>
         <a href="/gratuita" class="hover:text-blue-400 transition-colors">Consultoria Gratuita</a>
       </nav>
-
-      <div>
-        <a href="/gratuita" class="inline-flex items-center justify-center bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs sm:text-sm px-6 py-3 rounded-xl transition-all shadow-[0_0_20px_rgba(37,99,235,0.4)]">
-          Solicitar Orçamento
-        </a>
-      </div>
+      <a href="/gratuita" class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs sm:text-sm px-6 py-3 rounded-xl transition-all shadow-[0_0_20px_rgba(37,99,235,0.4)]">
+        Solicitar Orçamento
+      </a>
     </div>
   </header>
 
-  <!-- HERO SECTION -->
-  <section class="pt-36 pb-12 px-6 bg-grid-pattern text-center">
-    <div class="max-w-4xl mx-auto">
-      <span class="text-xs font-mono font-semibold tracking-wider text-blue-400 uppercase bg-blue-500/10 border border-blue-500/20 px-4 py-1.5 rounded-full">
-        CASES E PROJETOS
-      </span>
-      <h1 class="font-heading font-extrabold text-4xl sm:text-6xl text-white mt-6 tracking-tight">
-        Nosso portfólio
-      </h1>
-      <p class="mt-4 text-gray-400 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
-        Sites, sistemas e aplicativos desenvolvidos sob medida para empresas que precisam de tecnologia alinhada ao negócio.
-      </p>
+  <!-- HERO PORTFÓLIO -->
+  <section class="pt-36 pb-12 px-6 bg-grid-pattern">
+    <div class="max-w-4xl mx-auto text-center">
+      <span class="text-xs font-mono font-semibold text-blue-400 bg-blue-500/10 border border-blue-500/20 px-4 py-1.5 rounded-full">NOSSO TRABALHO</span>
+      <h1 class="font-heading font-extrabold text-4xl sm:text-6xl text-white mt-6 tracking-tight">Projetos que geram <span class="text-blue-500">resultados reais.</span></h1>
+      <p class="mt-4 text-gray-400 text-sm sm:text-base max-w-2xl mx-auto">Conheça algumas das soluções, sistemas e plataformas digitais construídas pela WiaDigital.</p>
     </div>
   </section>
 
-  <!-- PORTFOLIO GRID -->
-  <section class="py-12 px-6 bg-brand-black">
+  <!-- GRID PORTFÓLIO -->
+  <section class="py-12 px-6 bg-brand-black flex-grow">
     <div class="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-      <!-- PROJETO 1 -->
-      <div class="bg-brand-darkCard border border-brand-cardBorder rounded-3xl overflow-hidden flex flex-col hover:border-blue-500/40 transition-all group">
-        <div class="relative overflow-hidden aspect-[16/10] bg-gray-900">
-          <span class="absolute top-4 left-4 z-10 bg-black/70 backdrop-blur-md text-white text-xs px-3 py-1 rounded-full font-medium border border-white/10">
-            Site institucional
-          </span>
-          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop" alt="Agência BORGEZ" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-        </div>
-        <div class="p-6 flex flex-col flex-grow justify-between">
-          <div>
-            <h3 class="font-heading font-bold text-xl text-white mb-2">Agência BORGEZ</h3>
-            <p class="text-gray-400 text-xs sm:text-sm leading-relaxed mb-6">
-              Site institucional moderno para agência de marketing, com identidade visual marcante e foco em conversão.
-            </p>
+      
+      <!-- Card Project 1 -->
+      <div class="bg-brand-darkCard border border-white/10 rounded-2xl overflow-hidden group hover:border-blue-500/50 transition-all flex flex-col justify-between">
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-[10px] font-mono bg-blue-600/20 text-blue-400 border border-blue-500/30 px-2.5 py-1 rounded-full uppercase">SaaS & Web App</span>
+            <span class="text-xs text-gray-500">2026</span>
           </div>
-          <a href="#" class="w-full bg-white/10 hover:bg-white/20 text-white font-medium text-sm py-3 px-4 rounded-xl flex items-center justify-center gap-2 transition-colors">
-            Ver projeto <i data-lucide="external-link" class="w-4 h-4"></i>
-          </a>
+          <h3 class="font-heading font-bold text-xl text-white group-hover:text-blue-400 transition-colors">WiaPonto</h3>
+          <p class="text-gray-400 text-xs mt-2 leading-relaxed">Sistema completo de gestão de ponto eletrônico, geolocalização e controle de horários corporativos.</p>
+        </div>
+        <div class="p-6 pt-0 border-t border-white/5 mt-4 flex items-center justify-between">
+          <span class="text-xs text-gray-500">Node.js, React, Tailwind</span>
+          <i data-lucide="arrow-up-right" class="w-4 h-4 text-gray-400 group-hover:text-blue-400 transition-colors"></i>
         </div>
       </div>
 
-      <!-- PROJETO 2 -->
-      <div class="bg-brand-darkCard border border-brand-cardBorder rounded-3xl overflow-hidden flex flex-col hover:border-blue-500/40 transition-all group">
-        <div class="relative overflow-hidden aspect-[16/10] bg-gray-900">
-          <span class="absolute top-4 left-4 z-10 bg-black/70 backdrop-blur-md text-white text-xs px-3 py-1 rounded-full font-medium border border-white/10">
-            Landing page
-          </span>
-          <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800&auto=format&fit=crop" alt="ALPHA Metalúrgica" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-        </div>
-        <div class="p-6 flex flex-col flex-grow justify-between">
-          <div>
-            <h3 class="font-heading font-bold text-xl text-white mb-2">ALPHA Metalúrgica</h3>
-            <p class="text-gray-400 text-xs sm:text-sm leading-relaxed mb-6">
-              Landing page industrial para metalúrgica automotiva, destacando serviços, processos e autoridade técnica.
-            </p>
+      <!-- Card Project 2 -->
+      <div class="bg-brand-darkCard border border-white/10 rounded-2xl overflow-hidden group hover:border-blue-500/50 transition-all flex flex-col justify-between">
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-[10px] font-mono bg-blue-600/20 text-blue-400 border border-blue-500/30 px-2.5 py-1 rounded-full uppercase">Telecom & CRM</span>
+            <span class="text-xs text-gray-500">2025</span>
           </div>
-          <a href="#" class="w-full bg-white/10 hover:bg-white/20 text-white font-medium text-sm py-3 px-4 rounded-xl flex items-center justify-center gap-2 transition-colors">
-            Ver projeto <i data-lucide="external-link" class="w-4 h-4"></i>
-          </a>
+          <h3 class="font-heading font-bold text-xl text-white group-hover:text-blue-400 transition-colors">Gauchos Telecom</h3>
+          <p class="text-gray-400 text-xs mt-2 leading-relaxed">Plataforma web para provedores de internet com integração de faturamento, chamados e mapa de rede.</p>
+        </div>
+        <div class="p-6 pt-0 border-t border-white/5 mt-4 flex items-center justify-between">
+          <span class="text-xs text-gray-500">Next.js, PostgreSQL</span>
+          <i data-lucide="arrow-up-right" class="w-4 h-4 text-gray-400 group-hover:text-blue-400 transition-colors"></i>
         </div>
       </div>
 
-      <!-- PROJETO 3 -->
-      <div class="bg-brand-darkCard border border-brand-cardBorder rounded-3xl overflow-hidden flex flex-col hover:border-blue-500/40 transition-all group">
-        <div class="relative overflow-hidden aspect-[16/10] bg-gray-900">
-          <span class="absolute top-4 left-4 z-10 bg-black/70 backdrop-blur-md text-white text-xs px-3 py-1 rounded-full font-medium border border-white/10">
-            Sistema Web
-          </span>
-          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop" alt="DATACLIN" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-        </div>
-        <div class="p-6 flex flex-col flex-grow justify-between">
-          <div>
-            <h3 class="font-heading font-bold text-xl text-white mb-2">DATACLIN</h3>
-            <p class="text-gray-400 text-xs sm:text-sm leading-relaxed mb-6">
-              Software para clínicas com gestão completa: prontuário, agenda, financeiro e acompanhamento de pacientes.
-            </p>
+      <!-- Card Project 3 -->
+      <div class="bg-brand-darkCard border border-white/10 rounded-2xl overflow-hidden group hover:border-blue-500/50 transition-all flex flex-col justify-between">
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-[10px] font-mono bg-blue-600/20 text-blue-400 border border-blue-500/30 px-2.5 py-1 rounded-full uppercase">Geolocalização</span>
+            <span class="text-xs text-gray-500">2025</span>
           </div>
-          <a href="#" class="w-full bg-white/10 hover:bg-white/20 text-white font-medium text-sm py-3 px-4 rounded-xl flex items-center justify-center gap-2 transition-colors">
-            Ver projeto <i data-lucide="external-link" class="w-4 h-4"></i>
-          </a>
+          <h3 class="font-heading font-bold text-xl text-white group-hover:text-blue-400 transition-colors">WiaGeo</h3>
+          <p class="text-gray-400 text-xs mt-2 leading-relaxed">Mapeamento em tempo real de infraestrutura de fibra óptica e roteamento de equipes externas.</p>
         </div>
-      </div>
-
-      <!-- PROJETO 4 -->
-      <div class="bg-brand-darkCard border border-brand-cardBorder rounded-3xl overflow-hidden flex flex-col hover:border-blue-500/40 transition-all group">
-        <div class="relative overflow-hidden aspect-[16/10] bg-gray-900">
-          <span class="absolute top-4 left-4 z-10 bg-black/70 backdrop-blur-md text-white text-xs px-3 py-1 rounded-full font-medium border border-white/10">
-            SaaS / Plataforma
-          </span>
-          <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=800&auto=format&fit=crop" alt="Elitte Agenda" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-        </div>
-        <div class="p-6 flex flex-col flex-grow justify-between">
-          <div>
-            <h3 class="font-heading font-bold text-xl text-white mb-2">Elitte Agenda</h3>
-            <p class="text-gray-400 text-xs sm:text-sm leading-relaxed mb-6">
-              Plataforma para gestão de shows e eventos, com agenda, artistas, contratos e operação de ponta a ponta.
-            </p>
-          </div>
-          <a href="#" class="w-full bg-white/10 hover:bg-white/20 text-white font-medium text-sm py-3 px-4 rounded-xl flex items-center justify-center gap-2 transition-colors">
-            Ver projeto <i data-lucide="external-link" class="w-4 h-4"></i>
-          </a>
-        </div>
-      </div>
-
-      <!-- PROJETO 5 -->
-      <div class="bg-brand-darkCard border border-brand-cardBorder rounded-3xl overflow-hidden flex flex-col hover:border-blue-500/40 transition-all group">
-        <div class="relative overflow-hidden aspect-[16/10] bg-gray-900">
-          <span class="absolute top-4 left-4 z-10 bg-black/70 backdrop-blur-md text-white text-xs px-3 py-1 rounded-full font-medium border border-white/10">
-            Dashboard
-          </span>
-          <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=800&auto=format&fit=crop" alt="TNV Team Sports - Dashboard" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-        </div>
-        <div class="p-6 flex flex-col flex-grow justify-between">
-          <div>
-            <h3 class="font-heading font-bold text-xl text-white mb-2">TNV Team Sports — Dashboard</h3>
-            <p class="text-gray-400 text-xs sm:text-sm leading-relaxed mb-6">
-              Painel administrativo para gestão esportiva, eventos, inscrições, financeiro, loja e indicadores em tempo real.
-            </p>
-          </div>
-          <a href="#" class="w-full bg-white/10 hover:bg-white/20 text-white font-medium text-sm py-3 px-4 rounded-xl flex items-center justify-center gap-2 transition-colors">
-            Ver projeto <i data-lucide="external-link" class="w-4 h-4"></i>
-          </a>
-        </div>
-      </div>
-
-      <!-- PROJETO 6 -->
-      <div class="bg-brand-darkCard border border-brand-cardBorder rounded-3xl overflow-hidden flex flex-col hover:border-blue-500/40 transition-all group">
-        <div class="relative overflow-hidden aspect-[16/10] bg-gray-900">
-          <span class="absolute top-4 left-4 z-10 bg-black/70 backdrop-blur-md text-white text-xs px-3 py-1 rounded-full font-medium border border-white/10">
-            App Mobile
-          </span>
-          <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=800&auto=format&fit=crop" alt="TNV Team Sports - App" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-        </div>
-        <div class="p-6 flex flex-col flex-grow justify-between">
-          <div>
-            <h3 class="font-heading font-bold text-xl text-white mb-2">TNV Team Sports — App</h3>
-            <p class="text-gray-400 text-xs sm:text-sm leading-relaxed mb-6">
-              Aplicativo mobile para atletas: descoberta de provas, inscrições, loja oficial e galeria de fotos do evento.
-            </p>
-          </div>
-          <a href="#" class="w-full bg-white/10 hover:bg-white/20 text-white font-medium text-sm py-3 px-4 rounded-xl flex items-center justify-center gap-2 transition-colors">
-            Ver projeto <i data-lucide="external-link" class="w-4 h-4"></i>
-          </a>
+        <div class="p-6 pt-0 border-t border-white/5 mt-4 flex items-center justify-between">
+          <span class="text-xs text-gray-500">React Native, Maps API</span>
+          <i data-lucide="arrow-up-right" class="w-4 h-4 text-gray-400 group-hover:text-blue-400 transition-colors"></i>
         </div>
       </div>
 
     </div>
   </section>
 
-  <!-- CTA BANNER (Estilo Lesoftware) -->
-  <section class="py-16 px-6 bg-brand-black">
-    <div class="max-w-5xl mx-auto bg-gradient-to-r from-brand-darkCard via-blue-950/20 to-brand-darkCard border border-brand-cardBorder p-10 sm:p-14 rounded-3xl text-center relative overflow-hidden">
-      <h2 class="font-heading font-extrabold text-2xl sm:text-4xl text-white mb-3">
-        Tem um projeto em mente?
-      </h2>
-      <p class="text-gray-400 text-xs sm:text-sm max-w-xl mx-auto mb-8 leading-relaxed">
-        Conte o desafio da sua empresa e vamos construir a solução certa juntos.
-      </p>
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="/gratuita" class="w-full sm:w-auto bg-white text-brand-black hover:bg-gray-200 font-bold text-sm px-8 py-3.5 rounded-xl transition-all">
-          Falar com a equipe ↗
+  <!-- FOOTER -->
+  <footer class="bg-black border-t border-white/10 pt-16 pb-8 px-6 text-gray-400 text-sm mt-auto">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 gap-8 md:gap-10 pb-12">
+      <div class="md:col-span-4 space-y-5">
+        <a href="#" class="inline-block">
+          <img src="https://i.ibb.co/0ph5hPJL/logo-wiadigital-12.png" alt="WiaDigital" class="h-9 w-auto">
         </a>
-        <a href="/servicos" class="w-full sm:w-auto bg-transparent border border-white/20 hover:border-white text-white font-semibold text-sm px-8 py-3.5 rounded-xl transition-all">
-          Ver serviços
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER ESTILO LESOFTWARE -->
-  <footer class="bg-brand-black border-t border-white/10 pt-16 pb-12 px-6 mt-auto">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
-      <!-- Coluna 1: Logo & Sobre -->
-      <div class="space-y-4">
-        <img src="https://i.ibb.co/0ph5hPJL/logo-wiadigital-12.png" alt="WiaDigital" class="h-10 w-auto object-contain" />
-        <p class="text-gray-400 text-xs leading-relaxed">
-          Soluções tecnológicas para empresas. Desenvolvimento de software sob medida para empresas em todo o Brasil.
+        <p class="text-xs text-gray-400 leading-relaxed pr-4">
+          Evoluímos suas ideias em softwares potentes e experiências marcantes. Qualidade técnica e soluções que geram valor de verdade.
         </p>
+        <div class="flex items-center gap-3 pt-2">
+          <a href="#" class="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:border-blue-500 transition-all bg-white/5">
+            <i data-lucide="facebook" class="w-3.5 h-3.5"></i>
+          </a>
+          <a href="#" class="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:border-blue-500 transition-all bg-white/5">
+            <i data-lucide="instagram" class="w-3.5 h-3.5"></i>
+          </a>
+          <a href="#" class="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:border-blue-500 transition-all bg-white/5">
+            <i data-lucide="linkedin" class="w-3.5 h-3.5"></i>
+          </a>
+        </div>
       </div>
 
-      <!-- Coluna 2: Navegação -->
-      <div>
-        <h4 class="font-heading font-bold text-xs uppercase tracking-wider text-white mb-4">Navegação</h4>
-        <ul class="space-y-2.5 text-xs text-gray-400">
-          <li><a href="/" class="hover:text-blue-400 transition-colors">Início</a></li>
-          <li><a href="/sobre" class="hover:text-blue-400 transition-colors">Sobre</a></li>
-          <li><a href="/portfolio" class="hover:text-blue-400 transition-colors">Portfólio</a></li>
-          <li><a href="/servicos" class="hover:text-blue-400 transition-colors">Serviços</a></li>
+      <div class="md:col-span-3">
+        <h4 class="font-heading font-bold text-white text-base mb-4">Soluções</h4>
+        <ul class="space-y-3 text-xs">
+          <li><a href="/servicos" class="flex items-center gap-2 hover:text-blue-400 transition-colors"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span> Desenvolvimento de Software</a></li>
+          <li><a href="/servicos" class="flex items-center gap-2 hover:text-blue-400 transition-colors"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span> Desenvolvimento de sites</a></li>
+          <li><a href="/servicos" class="flex items-center gap-2 hover:text-blue-400 transition-colors"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span> Aplicativos Mobile</a></li>
+          <li><a href="/servicos" class="flex items-center gap-2 hover:text-blue-400 transition-colors"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span> Design Gráfico & Social Media</a></li>
         </ul>
       </div>
 
-      <!-- Coluna 3: Serviços -->
-      <div>
-        <h4 class="font-heading font-bold text-xs uppercase tracking-wider text-white mb-4">Serviços</h4>
-        <ul class="space-y-2.5 text-xs text-gray-400">
-          <li><a href="/servicos" class="hover:text-blue-400 transition-colors">Sistemas e SaaS</a></li>
-          <li><a href="/servicos" class="hover:text-blue-400 transition-colors">Sites e Landing Pages</a></li>
-          <li><a href="/servicos" class="hover:text-blue-400 transition-colors">Apps Mobile</a></li>
-          <li><a href="/servicos" class="hover:text-blue-400 transition-colors">Integrações</a></li>
+      <div class="md:col-span-2">
+        <h4 class="font-heading font-bold text-white text-base mb-4">Empresa</h4>
+        <ul class="space-y-3 text-xs">
+          <li><a href="/sobre" class="hover:text-blue-400 transition-colors">Sobre Nós</a></li>
+          <li><a href="/portfolio" class="hover:text-blue-400 transition-colors">Cases</a></li>
+          <li><a href="/servicos" class="hover:text-blue-400 transition-colors">Produtos</a></li>
+          <li><a href="/gratuita" class="hover:text-blue-400 transition-colors">Fale Conosco</a></li>
         </ul>
       </div>
 
-      <!-- Coluna 4: Contato -->
-      <div>
-        <h4 class="font-heading font-bold text-xs uppercase tracking-wider text-white mb-4">Contato</h4>
-        <ul class="space-y-2.5 text-xs text-gray-400">
-          <li><a href="/gratuita" class="hover:text-blue-400 transition-colors">Fale conosco</a></li>
-          <li><a href="mailto:contato@wiadigital.com.br" class="hover:text-blue-400 transition-colors">E-mail</a></li>
-          <li><a href="https://wa.me/" target="_blank" class="hover:text-blue-400 transition-colors">WhatsApp</a></li>
-        </ul>
+      <div class="md:col-span-3 space-y-3">
+        <h4 class="font-heading font-bold text-white text-base mb-4">Contato</h4>
+        <div class="bg-white/5 border border-white/10 rounded-xl p-3 flex items-center gap-3 overflow-hidden">
+          <div class="w-8 h-8 rounded-lg bg-blue-600/20 text-blue-400 flex items-center justify-center shrink-0">
+            <i data-lucide="mail" class="w-4 h-4"></i>
+          </div>
+          <span class="text-xs text-gray-300 truncate min-w-0" title="contato@wiadigital.com.br">contato@wiadigital.com.br</span>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-xl p-3 flex items-center gap-3 overflow-hidden">
+          <div class="w-8 h-8 rounded-lg bg-blue-600/20 text-blue-400 flex items-center justify-center shrink-0">
+            <i data-lucide="phone" class="w-4 h-4"></i>
+          </div>
+          <span class="text-xs text-gray-300 truncate min-w-0">WhatsApp: (051) 98901-9193</span>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-xl p-3 flex items-center gap-3 overflow-hidden">
+          <div class="w-8 h-8 rounded-lg bg-blue-600/20 text-blue-400 flex items-center justify-center shrink-0">
+            <i data-lucide="map-pin" class="w-4 h-4"></i>
+          </div>
+          <span class="text-xs text-gray-300 truncate min-w-0">Viamão/RS</span>
+        </div>
       </div>
     </div>
 
-    <!-- Sub-footer -->
-    <div class="max-w-7xl mx-auto border-t border-white/5 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 gap-4">
-      <p>© 2024 - 2026 WiaDigital. Todos os direitos reservados.</p>
-      <p>Tecnologia & Design</p>
+    <div class="max-w-7xl mx-auto border-t border-white/10 pt-6 flex flex-col md:flex-row items-center justify-between text-xs text-gray-500 gap-4">
+      <p>© 2026 WiaDigital. Todos os direitos reservados.</p>
+      <div class="flex flex-wrap items-center gap-6 text-gray-400">
+        <a href="#" class="hover:text-white transition-colors">Termos</a>
+        <a href="#" class="hover:text-white transition-colors">Privacidade</a>
+        <a href="#" class="hover:text-white transition-colors">Cookies</a>
+        <a href="#" class="hover:text-white transition-colors">LGPD</a>
+        <a href="#" class="hover:text-white transition-colors">Exclusão de dados</a>
+      </div>
     </div>
   </footer>
 
-  <script>
-    lucide.createIcons();
-  </script>
+  <script>lucide.createIcons();</script>
 </body>
 </html>
