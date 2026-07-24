@@ -44,6 +44,13 @@
         linear-gradient(to right, rgba(37, 99, 235, 0.07) 1px, transparent 1px), 
         linear-gradient(to bottom, rgba(37, 99, 235, 0.07) 1px, transparent 1px);
     }
+    .scrollbar-hide::-webkit-scrollbar {
+      display: none;
+    }
+    .scrollbar-hide {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
   </style>
 </head>
 <body class="font-sans antialiased bg-brand-black text-gray-100 flex flex-col min-h-screen">
@@ -67,7 +74,7 @@
   </header>
 
   <!-- HERO SECTION -->
-  <section class="pt-36 pb-12 px-6 bg-grid-pattern text-center">
+  <section class="pt-36 pb-8 px-6 bg-grid-pattern text-center">
     <div class="max-w-4xl mx-auto">
       <span class="text-xs font-mono font-bold tracking-widest text-gray-400 uppercase">CASES E PROJETOS</span>
       <h1 class="font-heading font-extrabold text-4xl sm:text-6xl text-white mt-3 tracking-tight">Nosso portfólio</h1>
@@ -77,173 +84,30 @@
     </div>
   </section>
 
-  <!-- GRID DE PORTFÓLIO -->
-  <section class="py-12 px-6 bg-brand-black flex-grow">
-    <div class="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-      
-      <!-- 1. WiaFibra -->
-      <div class="bg-brand-darkCard border border-white/10 rounded-2xl overflow-hidden group hover:border-blue-500/50 transition-all flex flex-col justify-between">
-        <div>
-          <!-- Visual / Thumbnail -->
-          <div class="relative h-48 bg-gradient-to-br from-blue-950/80 to-slate-900 overflow-hidden flex items-center justify-center p-6 border-b border-white/5">
-            <span class="absolute top-3 left-3 bg-black/70 backdrop-blur-md text-white text-[11px] font-medium px-3 py-1 rounded-full border border-white/10">
-              Site Institucional
-            </span>
-            <div class="text-center">
-              <div class="font-heading font-extrabold text-3xl text-blue-400 tracking-wider">WiaFibra</div>
-              <div class="text-xs text-gray-400 mt-1">Plataforma Web & Portais ISP</div>
-            </div>
-          </div>
-          <!-- Conteúdo -->
-          <div class="p-6">
-            <h3 class="font-heading font-bold text-xl text-white group-hover:text-blue-400 transition-colors">WiaFibra</h3>
-            <p class="text-gray-400 text-xs mt-2 leading-relaxed">
-              Plataforma de sites e portais web desenvolvida sob medida para provedores de internet. Estrutura moderna, rápida, otimizada para conversão e autoatendimento completo de clientes.
-            </p>
-          </div>
-        </div>
-        <!-- Botão Ação -->
-        <div class="p-6 pt-0">
-          <a href="/gratuita" class="w-full inline-flex items-center justify-center gap-2 bg-gray-200 hover:bg-white text-gray-900 font-bold text-xs py-3 px-4 rounded-xl transition-all">
-            Ver projeto <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-          </a>
-        </div>
+  <!-- FILTROS DE CATEGORIA -->
+  <section class="pb-6 px-6 bg-brand-black">
+    <div class="max-w-7xl mx-auto">
+      <div id="filter-container" class="flex items-center justify-start md:justify-center gap-3 overflow-x-auto scrollbar-hide py-3 px-2">
+        <!-- Renderizado dinamicamente pelo JavaScript -->
       </div>
-
-      <!-- 2. WiaGeo -->
-      <div class="bg-brand-darkCard border border-white/10 rounded-2xl overflow-hidden group hover:border-blue-500/50 transition-all flex flex-col justify-between">
-        <div>
-          <div class="relative h-48 bg-gradient-to-br from-indigo-950/80 to-slate-900 overflow-hidden flex items-center justify-center p-6 border-b border-white/5">
-            <span class="absolute top-3 left-3 bg-black/70 backdrop-blur-md text-white text-[11px] font-medium px-3 py-1 rounded-full border border-white/10">
-              Mapeamento & FTTH
-            </span>
-            <div class="text-center">
-              <div class="font-heading font-extrabold text-3xl text-indigo-400 tracking-wider">WiaGeo</div>
-              <div class="text-xs text-gray-400 mt-1">Documentação de Rede Óptica</div>
-            </div>
-          </div>
-          <div class="p-6">
-            <h3 class="font-heading font-bold text-xl text-white group-hover:text-blue-400 transition-colors">WiaGeo</h3>
-            <p class="text-gray-400 text-xs mt-2 leading-relaxed">
-              Ferramenta definitiva para desenhar, documentar e gerenciar a infraestrutura física de rede de fibra óptica e geolocalização FTTH.
-            </p>
-          </div>
-        </div>
-        <div class="p-6 pt-0">
-          <a href="/gratuita" class="w-full inline-flex items-center justify-center gap-2 bg-gray-200 hover:bg-white text-gray-900 font-bold text-xs py-3 px-4 rounded-xl transition-all">
-            Ver projeto <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-          </a>
-        </div>
-      </div>
-
-      <!-- 3. WiaPonto -->
-      <div class="bg-brand-darkCard border border-white/10 rounded-2xl overflow-hidden group hover:border-blue-500/50 transition-all flex flex-col justify-between">
-        <div>
-          <div class="relative h-48 bg-gradient-to-br from-emerald-950/80 to-slate-900 overflow-hidden flex items-center justify-center p-6 border-b border-white/5">
-            <span class="absolute top-3 left-3 bg-black/70 backdrop-blur-md text-white text-[11px] font-medium px-3 py-1 rounded-full border border-white/10">
-              SaaS & Web App
-            </span>
-            <div class="text-center">
-              <div class="font-heading font-extrabold text-3xl text-emerald-400 tracking-wider">WiaPonto</div>
-              <div class="text-xs text-gray-400 mt-1">Gestão de Ponto Eletrônico</div>
-            </div>
-          </div>
-          <div class="p-6">
-            <h3 class="font-heading font-bold text-xl text-white group-hover:text-blue-400 transition-colors">WiaPonto</h3>
-            <p class="text-gray-400 text-xs mt-2 leading-relaxed">
-              Controle de ponto inteligente para equipes externas e internas do seu ISP, com geolocalização, validações e relatórios em tempo real.
-            </p>
-          </div>
-        </div>
-        <div class="p-6 pt-0">
-          <a href="/gratuita" class="w-full inline-flex items-center justify-center gap-2 bg-gray-200 hover:bg-white text-gray-900 font-bold text-xs py-3 px-4 rounded-xl transition-all">
-            Ver projeto <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-          </a>
-        </div>
-      </div>
-
-      <!-- 4. WiaPay -->
-      <div class="bg-brand-darkCard border border-white/10 rounded-2xl overflow-hidden group hover:border-blue-500/50 transition-all flex flex-col justify-between">
-        <div>
-          <div class="relative h-48 bg-gradient-to-br from-cyan-950/80 to-slate-900 overflow-hidden flex items-center justify-center p-6 border-b border-white/5">
-            <span class="absolute top-3 left-3 bg-black/70 backdrop-blur-md text-white text-[11px] font-medium px-3 py-1 rounded-full border border-white/10">
-              Fintech & Pagamentos
-            </span>
-            <div class="text-center">
-              <div class="font-heading font-extrabold text-3xl text-cyan-400 tracking-wider">WiaPay</div>
-              <div class="text-xs text-gray-400 mt-1">Gestão Financeira para ISPs</div>
-            </div>
-          </div>
-          <div class="p-6">
-            <h3 class="font-heading font-bold text-xl text-white group-hover:text-blue-400 transition-colors">WiaPay</h3>
-            <p class="text-gray-400 text-xs mt-2 leading-relaxed">
-              Solução financeira projetada para otimizar o fluxo de caixa de provedores. Automatiza do faturamento mensal à baixa instantânea das mensalidades.
-            </p>
-          </div>
-        </div>
-        <div class="p-6 pt-0">
-          <a href="/gratuita" class="w-full inline-flex items-center justify-center gap-2 bg-gray-200 hover:bg-white text-gray-900 font-bold text-xs py-3 px-4 rounded-xl transition-all">
-            Ver projeto <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-          </a>
-        </div>
-      </div>
-
-      <!-- 5. WiaAlmox -->
-      <div class="bg-brand-darkCard border border-white/10 rounded-2xl overflow-hidden group hover:border-blue-500/50 transition-all flex flex-col justify-between">
-        <div>
-          <div class="relative h-48 bg-gradient-to-br from-amber-950/80 to-slate-900 overflow-hidden flex items-center justify-center p-6 border-b border-white/5">
-            <span class="absolute top-3 left-3 bg-black/70 backdrop-blur-md text-white text-[11px] font-medium px-3 py-1 rounded-full border border-white/10">
-              Gestão de Estoque
-            </span>
-            <div class="text-center">
-              <div class="font-heading font-extrabold text-3xl text-amber-400 tracking-wider">WiaAlmox</div>
-              <div class="text-xs text-gray-400 mt-1">Controle de Insumos & Telecom</div>
-            </div>
-          </div>
-          <div class="p-6">
-            <h3 class="font-heading font-bold text-xl text-white group-hover:text-blue-400 transition-colors">WiaAlmox</h3>
-            <p class="text-gray-400 text-xs mt-2 leading-relaxed">
-              Elimina perdas operacionais monitorando insumos de telecom. Acompanha cada item desde a entrada do fornecedor até a aplicação final no cliente.
-            </p>
-          </div>
-        </div>
-        <div class="p-6 pt-0">
-          <a href="/gratuita" class="w-full inline-flex items-center justify-center gap-2 bg-gray-200 hover:bg-white text-gray-900 font-bold text-xs py-3 px-4 rounded-xl transition-all">
-            Ver projeto <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-          </a>
-        </div>
-      </div>
-
-      <!-- 6. WiaConectis -->
-      <div class="bg-brand-darkCard border border-white/10 rounded-2xl overflow-hidden group hover:border-blue-500/50 transition-all flex flex-col justify-between">
-        <div>
-          <div class="relative h-48 bg-gradient-to-br from-blue-900/80 to-slate-900 overflow-hidden flex items-center justify-center p-6 border-b border-white/5">
-            <span class="absolute top-3 left-3 bg-black/70 backdrop-blur-md text-white text-[11px] font-medium px-3 py-1 rounded-full border border-white/10">
-              ERP Completo
-            </span>
-            <div class="text-center">
-              <div class="font-heading font-extrabold text-3xl text-blue-500 tracking-wider">WiaConectis</div>
-              <div class="text-xs text-gray-400 mt-1">ERP para Provedores ISP</div>
-            </div>
-          </div>
-          <div class="p-6">
-            <h3 class="font-heading font-bold text-xl text-white group-hover:text-blue-400 transition-colors">WiaConectis</h3>
-            <p class="text-gray-400 text-xs mt-2 leading-relaxed">
-              ERP definitivo para ISPs. Autenticação de rede, gestão técnica e controle financeiro integrados em uma plataforma robusta de alta performance.
-            </p>
-          </div>
-        </div>
-        <div class="p-6 pt-0">
-          <a href="/gratuita" class="w-full inline-flex items-center justify-center gap-2 bg-gray-200 hover:bg-white text-gray-900 font-bold text-xs py-3 px-4 rounded-xl transition-all">
-            Ver projeto <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-          </a>
-        </div>
-      </div>
-
     </div>
   </section>
 
-  <!-- CTA FOOTER (Inspirado no final da referência) -->
+  <!-- GRID DE PORTFÓLIO -->
+  <section class="py-6 px-6 bg-brand-black flex-grow">
+    <div class="max-w-7xl mx-auto">
+      <div id="portfolio-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 min-h-[400px]">
+        <!-- Renderizado dinamicamente pelo JavaScript -->
+      </div>
+
+      <!-- PAGINAÇÃO -->
+      <div id="pagination-container" class="mt-12 flex items-center justify-center gap-2">
+        <!-- Renderizado dinamicamente pelo JavaScript se houver mais de 6 itens -->
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FOOTER -->
   <section class="py-12 px-6 bg-brand-black">
     <div class="max-w-7xl mx-auto bg-brand-darkCard border border-white/10 rounded-3xl p-10 text-center relative overflow-hidden">
       <div class="relative z-10 max-w-2xl mx-auto space-y-4">
@@ -343,6 +207,235 @@
     </div>
   </footer>
 
-  <script>lucide.createIcons();</script>
+  <!-- SCRIPT DE FILTRAGEM E PAGINAÇÃO -->
+  <script>
+    // Base de Dados dos Projetos
+    const projectsData = [
+      {
+        id: 1,
+        title: "WiaFibra",
+        tag: "Institucional",
+        categories: ["Meus Serviços", "Institucional", "Plataformas"],
+        gradient: "from-blue-950/80 to-slate-900",
+        textColor: "text-blue-400",
+        subtitle: "Plataforma Web & Portais ISP",
+        description: "Plataforma de sites e portais web desenvolvida sob medida para provedores de internet. Estrutura moderna, rápida, otimizada para conversão e autoatendimento completo de clientes.",
+        link: "/gratuita"
+      },
+      {
+        id: 2,
+        title: "WiaGeo",
+        tag: "Mapeamento & FTTH",
+        categories: ["Meus Serviços", "Sistemas", "SaaS"],
+        gradient: "from-indigo-950/80 to-slate-900",
+        textColor: "text-indigo-400",
+        subtitle: "Documentação de Rede Óptica",
+        description: "Ferramenta definitiva para desenhar, documentar e gerenciar a infraestrutura física de rede de fibra óptica e geolocalização FTTH.",
+        link: "/gratuita"
+      },
+      {
+        id: 3,
+        title: "WiaPonto",
+        tag: "SaaS & Web App",
+        categories: ["Meus Serviços", "SaaS", "Apps", "Sistemas"],
+        gradient: "from-emerald-950/80 to-slate-900",
+        textColor: "text-emerald-400",
+        subtitle: "Gestão de Ponto Eletrônico",
+        description: "Controle de ponto inteligente para equipes externas e internas do seu ISP, com geolocalização, validações e relatórios em tempo real.",
+        link: "/gratuita"
+      },
+      {
+        id: 4,
+        title: "WiaPay",
+        tag: "Fintech & Pagamentos",
+        categories: ["Meus Serviços", "Fintech", "Sistemas"],
+        gradient: "from-cyan-950/80 to-slate-900",
+        textColor: "text-cyan-400",
+        subtitle: "Gestão Financeira para ISPs",
+        description: "Solução financeira projetada para otimizar o fluxo de caixa de provedores. Automatiza do faturamento mensal à baixa instantânea das mensalidades.",
+        link: "/gratuita"
+      },
+      {
+        id: 5,
+        title: "WiaAlmox",
+        tag: "Gestão de Estoque",
+        categories: ["Meus Serviços", "Sistemas"],
+        gradient: "from-amber-950/80 to-slate-900",
+        textColor: "text-amber-400",
+        subtitle: "Controle de Insumos & Telecom",
+        description: "Elimina perdas operacionais monitorando insumos de telecom. Acompanha cada item desde a entrada do fornecedor até a aplicação final no cliente.",
+        link: "/gratuita"
+      },
+      {
+        id: 6,
+        title: "WiaConectis",
+        tag: "ERP Completo",
+        categories: ["Meus Serviços", "Sistemas", "Plataformas"],
+        gradient: "from-blue-900/80 to-slate-900",
+        textColor: "text-blue-500",
+        subtitle: "ERP para Provedores ISP",
+        description: "ERP definitivo para ISPs. Autenticação de rede, gestão técnica e controle financeiro integrados em uma plataforma robusta de alta performance.",
+        link: "/gratuita"
+      }
+    ];
+
+    // Lista master de categorias disponíveis
+    const availableCategories = [
+      "Todos",
+      "Meus Serviços",
+      "E-commerce",
+      "Fintech",
+      "Institucional",
+      "Landing Page",
+      "Plataformas",
+      "SaaS",
+      "Startups",
+      "Sistemas",
+      "Apps"
+    ];
+
+    let currentCategory = "Todos";
+    let currentPage = 1;
+    const itemsPerPage = 6;
+
+    // Inicialização da Página
+    document.addEventListener("DOMContentLoaded", () => {
+      renderFilterButtons();
+      renderProjects();
+      lucide.createIcons();
+    });
+
+    // Renderiza botões de filtro (somente categorias que possuem projetos)
+    function renderFilterButtons() {
+      const filterContainer = document.getElementById("filter-container");
+      filterContainer.innerHTML = "";
+
+      availableCategories.forEach(cat => {
+        let count = 0;
+        if (cat === "Todos") {
+          count = projectsData.length;
+        } else {
+          count = projectsData.filter(p => p.categories.includes(cat)).length;
+        }
+
+        // Exibe o botão se houver projetos vinculados
+        if (count > 0) {
+          const btn = document.createElement("button");
+          btn.type = "button";
+          
+          const isActive = currentCategory === cat;
+          btn.className = isActive 
+            ? "px-5 py-2.5 rounded-full text-xs font-semibold whitespace-nowrap bg-blue-600 text-white shadow-[0_0_15px_rgba(37,99,235,0.4)] transition-all"
+            : "px-5 py-2.5 rounded-full text-xs font-medium whitespace-nowrap bg-white/5 hover:bg-white/10 text-gray-400 hover:text-white border border-white/10 transition-all";
+          
+          btn.textContent = cat;
+          btn.onclick = () => filterCategory(cat);
+          filterContainer.appendChild(btn);
+        }
+      });
+    }
+
+    // Filtrar categoria selecionada
+    function filterCategory(cat) {
+      currentCategory = cat;
+      currentPage = 1;
+      renderFilterButtons();
+      renderProjects();
+    }
+
+    // Renderiza o grid de projetos e a paginação
+    function renderProjects() {
+      const grid = document.getElementById("portfolio-grid");
+      const paginationContainer = document.getElementById("pagination-container");
+
+      // Filtrar itens
+      let filtered = projectsData;
+      if (currentCategory !== "Todos") {
+        filtered = projectsData.filter(p => p.categories.includes(currentCategory));
+      }
+
+      // Calcular Páginas
+      const totalPages = Math.ceil(filtered.length / itemsPerPage);
+      const startIndex = (currentPage - 1) * itemsPerPage;
+      const paginatedItems = filtered.slice(startIndex, startIndex + itemsPerPage);
+
+      // Renderizar Cards
+      if (paginatedItems.length === 0) {
+        grid.innerHTML = `
+          <div class="col-span-full text-center py-16 text-gray-500">
+            Nenhum projeto encontrado nesta categoria.
+          </div>
+        `;
+      } else {
+        grid.innerHTML = paginatedItems.map(p => `
+          <div class="bg-brand-darkCard border border-white/10 rounded-2xl overflow-hidden group hover:border-blue-500/50 transition-all flex flex-col justify-between">
+            <div>
+              <div class="relative h-48 bg-gradient-to-br ${p.gradient} overflow-hidden flex items-center justify-center p-6 border-b border-white/5">
+                <span class="absolute top-3 left-3 bg-black/70 backdrop-blur-md text-white text-[11px] font-medium px-3 py-1 rounded-full border border-white/10">
+                  ${p.tag}
+                </span>
+                <div class="text-center">
+                  <div class="font-heading font-extrabold text-3xl ${p.textColor} tracking-wider">${p.title}</div>
+                  <div class="text-xs text-gray-400 mt-1">${p.subtitle}</div>
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="font-heading font-bold text-xl text-white group-hover:text-blue-400 transition-colors">${p.title}</h3>
+                <p class="text-gray-400 text-xs mt-2 leading-relaxed">
+                  ${p.description}
+                </p>
+              </div>
+            </div>
+            <div class="p-6 pt-0">
+              <a href="${p.link}" class="w-full inline-flex items-center justify-center gap-2 bg-gray-200 hover:bg-white text-gray-900 font-bold text-xs py-3 px-4 rounded-xl transition-all">
+                Ver projeto <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      // Renderizar Paginação
+      if (totalPages > 1) {
+        let paginationHTML = '';
+        
+        // Botão Anterior
+        paginationHTML += `
+          <button onclick="goToPage(${currentPage - 1})" ${currentPage === 1 ? 'disabled class="opacity-40 cursor-not-allowed px-3 py-2 text-xs rounded-lg border border-white/10 text-gray-400"' : 'class="px-3 py-2 text-xs rounded-lg border border-white/10 text-gray-300 hover:bg-white/10 transition-all"'}>
+            Anterior
+          </button>
+        `;
+
+        // Botões Numéricos
+        for (let i = 1; i <= totalPages; i++) {
+          paginationHTML += `
+            <button onclick="goToPage(${i})" class="w-9 h-9 text-xs rounded-lg font-bold transition-all ${currentPage === i ? 'bg-blue-600 text-white shadow-[0_0_10px_rgba(37,99,235,0.5)]' : 'bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300'}">
+              ${i}
+            </button>
+          `;
+        }
+
+        // Botão Próximo
+        paginationHTML += `
+          <button onclick="goToPage(${currentPage + 1})" ${currentPage === totalPages ? 'disabled class="opacity-40 cursor-not-allowed px-3 py-2 text-xs rounded-lg border border-white/10 text-gray-400"' : 'class="px-3 py-2 text-xs rounded-lg border border-white/10 text-gray-300 hover:bg-white/10 transition-all"'}>
+            Próximo
+          </button>
+        `;
+
+        paginationContainer.innerHTML = paginationHTML;
+      } else {
+        paginationContainer.innerHTML = '';
+      }
+
+      lucide.createIcons();
+    }
+
+    // Mudar de Página
+    function goToPage(page) {
+      currentPage = page;
+      renderProjects();
+      window.scrollTo({ top: document.getElementById('filter-container').offsetTop - 100, behavior: 'smooth' });
+    }
+  </script>
 </body>
 </html>
