@@ -1,507 +1,169 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Termos de Uso - WiaDigital</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <style>
-        :root {
-            --bg-color: #050505;
-            --card-bg: #0a0a0c;
-            --card-border: #1a1a20;
-            --alert-bg: #071324;
-            --alert-border: #112d55;
-            --text-main: #ffffff;
-            --text-muted: #9ca3af;
-            --text-sub: #6b7280;
-            --accent-blue: #3b82f6;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Termos de Uso | WiaDigital</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { heading: ['Plus Jakarta Sans', 'sans-serif'], sans: ['Inter', 'sans-serif'] },
+          colors: { brand: { black: '#07090E', darkCard: '#111622', blue: '#2563EB' } }
         }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
-        }
-
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 60px 20px;
-            flex: 1;
-        }
-
-        .header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .header h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 8px;
-            letter-spacing: -0.5px;
-        }
-
-        .header p {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-        }
-
-        .card {
-            background-color: var(--card-bg);
-            border: 1px solid var(--card-border);
-            border-radius: 12px;
-            padding: 28px;
-            margin-bottom: 24px;
-            transition: border-color 0.2s ease;
-        }
-
-        .card-title {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin-bottom: 16px;
-        }
-
-        .card-title svg {
-            width: 22px;
-            height: 22px;
-            color: var(--accent-blue);
-            flex-shrink: 0;
-        }
-
-        .card p {
-            color: var(--text-muted);
-            line-height: 1.6;
-            font-size: 0.95rem;
-            margin-bottom: 16px;
-        }
-
-        .card p:last-child {
-            margin-bottom: 0;
-        }
-
-        .card ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .card ul li {
-            position: relative;
-            padding-left: 20px;
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            line-height: 1.8;
-        }
-
-        .card ul li::before {
-            content: "•";
-            position: absolute;
-            left: 4px;
-            color: var(--text-muted);
-        }
-
-        /* Card de alerta especial (Observação Importante) */
-        .card-alert {
-            background-color: var(--alert-bg);
-            border-color: var(--alert-border);
-        }
-
-        .card-alert .card-title {
-            color: #ffffff;
-        }
-
-        /* --- RODAPÉ --- */
-        footer {
-            background-color: #000000;
-            border-top: 1px solid #121212;
-            padding: 60px 20px 20px 20px;
-            margin-top: auto;
-        }
-
-        .footer-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 2fr 1.2fr 1fr 2fr;
-            gap: 40px;
-            padding-bottom: 50px;
-        }
-
-        .footer-brand .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 700;
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-            text-decoration: none;
-            color: #fff;
-        }
-
-        .footer-brand p {
-            color: var(--text-sub);
-            font-size: 0.9rem;
-            line-height: 1.6;
-            margin-bottom: 24px;
-            max-width: 320px;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 12px;
-        }
-
-        .social-btn {
-            width: 38px;
-            height: 38px;
-            border-radius: 50%;
-            background-color: #111115;
-            border: 1px solid #22222a;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            text-decoration: none;
-            transition: background-color 0.2s;
-        }
-
-        .social-btn:hover {
-            background-color: #22222a;
-        }
-
-        .social-btn svg {
-            width: 18px;
-            height: 18px;
-            fill: currentColor;
-        }
-
-        .footer-column h4 {
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 20px;
-        }
-
-        .footer-column ul {
-            list-style: none;
-        }
-
-        .footer-column ul li {
-            margin-bottom: 12px;
-        }
-
-        .footer-column ul li a {
-            color: var(--text-sub);
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.2s;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .footer-column ul li a:hover {
-            color: #fff;
-        }
-
-        .dot {
-            width: 6px;
-            height: 6px;
-            background-color: var(--accent-blue);
-            border-radius: 50%;
-            display: inline-block;
-        }
-
-        /* Botões de Contato no Rodapé */
-        .contact-cards {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .contact-card {
-            background-color: #0a0a0e;
-            border: 1px solid #181820;
-            border-radius: 12px;
-            padding: 14px 18px;
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            text-decoration: none;
-            color: #fff;
-            font-size: 0.88rem;
-            font-weight: 500;
-            transition: border-color 0.2s;
-        }
-
-        .contact-card:hover {
-            border-color: #2a2a38;
-        }
-
-        .contact-icon {
-            width: 36px;
-            height: 36px;
-            border-radius: 8px;
-            background-color: #121624;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--accent-blue);
-            flex-shrink: 0;
-        }
-
-        .contact-icon svg {
-            width: 18px;
-            height: 18px;
-        }
-
-        /* Sub-rodapé (Copyright e Links Legais) */
-        .footer-bottom {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding-top: 25px;
-            border-top: 1px solid #121212;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 20px;
-            font-size: 0.85rem;
-            color: var(--text-sub);
-        }
-
-        .legal-links {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .legal-links a {
-            color: var(--text-sub);
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-
-        .legal-links a:hover, .legal-links a.active {
-            color: #fff;
-        }
-
-        /* Responsividade */
-        @media (max-width: 900px) {
-            .footer-container {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-
-        @media (max-width: 600px) {
-            .footer-container {
-                grid-template-columns: 1fr;
-            }
-            .footer-bottom {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-        }
-    </style>
+      }
+    }
+  </script>
 </head>
-<body>
+<body class="font-sans antialiased bg-brand-black text-gray-100 selection:bg-blue-600 selection:text-white flex flex-col min-h-screen">
 
-    <main class="container">
-        <header class="header">
-            <h1>Termos de Uso</h1>
-            <p>Última atualização: 23/07/2026</p>
-        </header>
+  <!-- HEADER -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-brand-black/90 backdrop-blur-md border-b border-white/10 py-3 px-6">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <a href="/" class="flex items-center py-1">
+        <img src="https://i.ibb.co/0ph5hPJL/logo-wiadigital-12.png" alt="WiaDigital" class="h-10 w-auto" />
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300">
+        <a href="/sobre" class="hover:text-blue-400 transition-colors">Sobre</a>
+        <a href="/servicos" class="hover:text-blue-400 transition-colors">Serviços</a>
+        <a href="/portfolio" class="hover:text-blue-400 transition-colors">Portfólio</a>
+        <a href="/gratuita" class="hover:text-blue-400 transition-colors">Consultoria Gratuita</a>
+      </nav>
+      <div>
+        <a href="https://wa.me/5551989019193" target="_blank" class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs sm:text-sm px-6 py-3 rounded-xl transition-all shadow-[0_0_20px_rgba(37,99,235,0.4)]">
+          Contato
+        </a>
+      </div>
+    </div>
+  </header>
 
-        <!-- Informações da Empresa -->
-        <section class="card">
-            <div class="card-title">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                </svg>
-                Informações da Empresa
-            </div>
-            <p>A WiaDigital estabelece os seguintes termos de uso para acesso e utilização de seus serviços, produtos e plataformas digitais.</p>
-        </section>
+  <!-- CONTENT -->
+  <main class="flex-grow pt-32 pb-20 px-6">
+    <div class="max-w-4xl mx-auto bg-brand-darkCard border border-white/10 rounded-3xl p-8 sm:p-12 shadow-2xl">
+      <span class="text-blue-500 font-mono text-xs uppercase tracking-widest font-bold">ÚLTIMA ATUALIZAÇÃO: 23/07/2026</span>
+      <h1 class="font-heading font-extrabold text-3xl sm:text-5xl text-white mt-2 mb-8">Termos de Uso</h1>
 
-        <!-- 1. Aceitação dos Termos -->
-        <section class="card">
-            <h2 class="card-title">1. Aceitação dos Termos</h2>
-            <p>Ao acessar e utilizar os serviços da WiaDigital, você concorda com estes termos de uso e todas as condições aqui estabelecidas.</p>
-            <ul>
-                <li>Aceite integral das condições estabelecidas</li>
-                <li>Compromisso em seguir as diretrizes de uso</li>
-                <li>Responsabilidade pelas informações fornecidas</li>
-            </ul>
-        </section>
-
-        <!-- 2. Serviços Oferecidos -->
-        <section class="card">
-            <h2 class="card-title">2. Serviços Oferecidos</h2>
-            <p>A WiaDigital oferece serviços de tecnologia e desenvolvimento, incluindo:</p>
-            <ul>
-                <li>Desenvolvimento de software</li>
-                <li>Desenvolvimento de sites e aplicações web</li>
-                <li>Aplicativos Mobile</li>
-                <li>Design Gráfico & Social Media</li>
-            </ul>
-        </section>
-
-        <!-- 3. Responsabilidades do Usuário -->
-        <section class="card">
-            <h2 class="card-title">3. Responsabilidades do Usuário</h2>
-            <p>O usuário se compromete a:</p>
-            <ul>
-                <li>Fornecer informações verdadeiras e atualizadas</li>
-                <li>Manter a confidencialidade de suas credenciais</li>
-                <li>Utilizar os serviços de forma ética e legal</li>
-                <li>Respeitar os direitos de propriedade intelectual</li>
-            </ul>
-        </section>
-
-        <!-- 4. Propriedade Intelectual -->
-        <section class="card">
-            <h2 class="card-title">4. Propriedade Intelectual</h2>
-            <p>Todo o conteúdo disponibilizado pela WiaDigital está protegido por direitos autorais, incluindo:</p>
-            <ul>
-                <li>Códigos-fonte desenvolvidos</li>
-                <li>Documentação técnica</li>
-                <li>Marcas e logotipos</li>
-                <li>Material visual e textual</li>
-            </ul>
-        </section>
-
-        <!-- 5. Limitação de Responsabilidade -->
-        <section class="card">
-            <h2 class="card-title">5. Limitação de Responsabilidade</h2>
-            <p>A WiaDigital não se responsabiliza por:</p>
-            <ul>
-                <li>Uso indevido da plataforma por terceiros</li>
-                <li>Interrupções temporárias do serviço</li>
-                <li>Danos indiretos causados pelo uso do serviço</li>
-            </ul>
-        </section>
-
-        <!-- Observação Importante -->
-        <section class="card card-alert">
-            <div class="card-title">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <line x1="12" y1="8" x2="12" y2="12"></line>
-                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
-                </svg>
-                Observação Importante
-            </div>
-            <p>Estes termos podem ser atualizados a qualquer momento. Recomendamos a verificação periódica para se manter informado sobre possíveis alterações.</p>
-        </section>
-    </main>
-
-    <!-- RODAPÉ COMPLETO -->
-    <footer>
-        <div class="footer-container">
-            <!-- Coluna 1: Logo e Sobre -->
-            <div class="footer-brand">
-                <a href="/" class="logo">
-                    <!-- Ícone SVG da pena/logo -->
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
-                        <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
-                        <path d="M2 2l7.586 7.586"></path>
-                        <circle cx="11" cy="11" r="2"></circle>
-                    </svg>
-                    Wia Digital
-                </a>
-                <p>Evoluímos suas ideias em softwares potentes e experiências marcantes. Qualidade técnica e soluções que geram valor de verdade.</p>
-                <div class="social-links">
-                    <a href="#" class="social-btn" aria-label="Facebook">
-                        <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
-                    </a>
-                    <a href="#" class="social-btn" aria-label="Instagram">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-                    </a>
-                    <a href="#" class="social-btn" aria-label="LinkedIn">
-                        <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Coluna 2: Soluções -->
-            <div class="footer-column">
-                <h4>Soluções</h4>
-                <ul>
-                    <li><a href="#"><span class="dot"></span> Desenvolvimento de Software</a></li>
-                    <li><a href="#"><span class="dot"></span> Desenvolvimento de sites</a></li>
-                    <li><a href="#"><span class="dot"></span> Aplicativos Mobile</a></li>
-                    <li><a href="#"><span class="dot"></span> Design Gráfico & Social Media</a></li>
-                </ul>
-            </div>
-
-            <!-- Coluna 3: Empresa -->
-            <div class="footer-column">
-                <h4>Empresa</h4>
-                <ul>
-                    <li><a href="#">Sobre Nós</a></li>
-                    <li><a href="#">Cases</a></li>
-                    <li><a href="#">Produtos</a></li>
-                    <li><a href="#">Fale Conosco</a></li>
-                </ul>
-            </div>
-
-            <!-- Coluna 4: Contato (Botões) -->
-            <div class="footer-column">
-                <h4>Contato</h4>
-                <div class="contact-cards">
-                    <a href="mailto:contato@wiadigital.com.br" class="contact-card">
-                        <div class="contact-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                        </div>
-                        <span>contato@wiadigital.com.br</span>
-                    </a>
-
-                    <a href="https://wa.me/5551989019193" class="contact-card">
-                        <div class="contact-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                        </div>
-                        <span>WhatsApp: (051) 98901-9193</span>
-                    </a>
-
-                    <div class="contact-card">
-                        <div class="contact-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                        </div>
-                        <span>Viamão/RS</span>
-                    </div>
-                </div>
-            </div>
+      <div class="space-y-6 text-gray-300 text-sm sm:text-base leading-relaxed">
+        
+        <div class="p-4 bg-white/5 border border-white/10 rounded-2xl flex items-start gap-3">
+          <i data-lucide="check-circle-2" class="w-5 h-5 text-blue-400 shrink-0 mt-0.5"></i>
+          <div>
+            <h3 class="text-white font-bold text-sm">Informações da Empresa</h3>
+            <p class="text-xs text-gray-400 mt-1">A WiaDigital estabelece os seguintes termos de uso para acesso e utilização de seus serviços, produtos e plataformas digitais.</p>
+          </div>
         </div>
 
-        <!-- Parte Inferior do Rodapé -->
-        <div class="footer-bottom">
-            <p>© 2026 WiaDigital. Todos os direitos reservados.</p>
-            <div class="flex flex-wrap items-center gap-6 text-gray-400">
-  <a href="/termos" class="hover:text-white transition-colors">Termos</a>
-  <a href="/privacidade" class="hover:text-white transition-colors">Privacidade</a>
-  <a href="/cookies" class="hover:text-white transition-colors">Cookies</a>
-  <a href="/lgpd" class="hover:text-white transition-colors">LGPD</a>
-  <a href="/exclusaodedados" class="hover:text-white transition-colors">Exclusão de dados</a>
-</div>
-        </div>
-    </footer>
+        <h2 class="font-heading font-bold text-xl text-white pt-4">1. Aceitação dos Termos</h2>
+        <p>Ao acessar e utilizar os serviços da WiaDigital, você concorda com estes termos de uso e todas as condições aqui estabelecidas.</p>
+        <ul class="list-disc pl-6 space-y-2 text-gray-400">
+          <li>Aceite integral das condições estabelecidas;</li>
+          <li>Compromisso em seguir as diretrizes de uso;</li>
+          <li>Responsabilidade pelas informações fornecidas.</li>
+        </ul>
 
+        <h2 class="font-heading font-bold text-xl text-white pt-4">2. Serviços Oferecidos</h2>
+        <p>A WiaDigital oferece serviços de tecnologia e desenvolvimento, incluindo desenvolvimento de software, aplicativos móveis, criação de sites e design gráfico.</p>
+
+        <h2 class="font-heading font-bold text-xl text-white pt-4">3. Propriedade Intelectual</h2>
+        <p>Todo o conteúdo presente no site, incluindo logos, marcas, textos, códigos e elementos visuais, é de propriedade exclusiva da WiaDigital ou possui licença de uso, sendo protegido pelas leis de propriedade intelectual.</p>
+
+        <h2 class="font-heading font-bold text-xl text-white pt-4">4. Contato</h2>
+        <p>Dúvidas sobre os Termos de Uso podem ser enviadas para o e-mail <a href="mailto:contato@wiadigital.com.br" class="text-blue-400 hover:underline">contato@wiadigital.com.br</a>.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-black border-t border-white/10 pt-16 pb-8 text-gray-400 text-sm">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12">
+        
+        <div class="space-y-4">
+          <a href="/" class="block">
+            <img src="https://i.ibb.co/0ph5hPJL/logo-wiadigital-12.png" alt="WiaDigital" class="h-10 w-auto" />
+          </a>
+          <p class="text-xs text-gray-400 leading-relaxed">
+            Evoluímos suas ideias em softwares potentes e experiências marcantes. Qualidade técnica e soluções que geram valor de verdade.
+          </p>
+          <div class="flex items-center gap-3 pt-2">
+            <a href="#" class="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all text-gray-300">
+              <i data-lucide="facebook" class="w-4 h-4"></i>
+            </a>
+            <a href="#" class="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all text-gray-300">
+              <i data-lucide="instagram" class="w-4 h-4"></i>
+            </a>
+            <a href="#" class="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all text-gray-300">
+              <i data-lucide="linkedin" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold text-base mb-4">Soluções</h4>
+          <ul class="space-y-3 text-xs">
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span><a href="/servicos" class="hover:text-white transition-colors">Desenvolvimento de Software</a></li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span><a href="/servicos" class="hover:text-white transition-colors">Desenvolvimento de sites</a></li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span><a href="/servicos" class="hover:text-white transition-colors">Aplicativos Mobile</a></li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span><a href="/servicos" class="hover:text-white transition-colors">Design Gráfico & Social Media</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold text-base mb-4">Empresa</h4>
+          <ul class="space-y-3 text-xs">
+            <li><a href="/sobre" class="hover:text-white transition-colors">Sobre Nós</a></li>
+            <li><a href="/portfolio" class="hover:text-white transition-colors">Cases</a></li>
+            <li><a href="/servicos" class="hover:text-white transition-colors">Produtos</a></li>
+            <li><a href="https://wa.me/5551989019193" target="_blank" class="hover:text-white transition-colors">Fale Conosco</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold text-base mb-4">Contato</h4>
+          <div class="space-y-3">
+            <a href="mailto:contato@wiadigital.com.br" class="flex items-center gap-3 p-3 bg-brand-darkCard border border-white/10 rounded-xl text-xs hover:border-blue-500 transition-colors">
+              <div class="w-8 h-8 rounded-lg bg-blue-600/20 text-blue-400 flex items-center justify-center">
+                <i data-lucide="mail" class="w-4 h-4"></i>
+              </div>
+              <span class="text-gray-300">contato@wiadigital.com.br</span>
+            </a>
+
+            <a href="https://wa.me/5551989019193" target="_blank" class="flex items-center gap-3 p-3 bg-brand-darkCard border border-white/10 rounded-xl text-xs hover:border-blue-500 transition-colors">
+              <div class="w-8 h-8 rounded-lg bg-blue-600/20 text-blue-400 flex items-center justify-center">
+                <i data-lucide="phone" class="w-4 h-4"></i>
+              </div>
+              <span class="text-gray-300">WhatsApp: (051) 98901-9193</span>
+            </a>
+
+            <div class="flex items-center gap-3 p-3 bg-brand-darkCard border border-white/10 rounded-xl text-xs">
+              <div class="w-8 h-8 rounded-lg bg-blue-600/20 text-blue-400 flex items-center justify-center">
+                <i data-lucide="map-pin" class="w-4 h-4"></i>
+              </div>
+              <span class="text-gray-300">Viamão/RS</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="border-t border-white/10 pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-gray-500">
+        <p>© 2026 WiaDigital. Todos os direitos reservados.</p>
+        <div class="flex flex-wrap items-center gap-6">
+          <a href="/termos" class="hover:text-white transition-colors">Termos</a>
+          <a href="/privacidade" class="hover:text-white transition-colors">Privacidade</a>
+          <a href="/cookies" class="hover:text-white transition-colors">Cookies</a>
+          <a href="/lgpd" class="hover:text-white transition-colors">LGPD</a>
+          <a href="/exclusaodedados" class="hover:text-white transition-colors">Exclusão de dados</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>lucide.createIcons();</script>
 </body>
 </html>
