@@ -31,7 +31,7 @@
       <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300">
         <a href="/sobre" class="hover:text-blue-400 transition-colors">Sobre</a>
         <a href="/servicos" class="hover:text-blue-400 transition-colors">Serviços</a>
-        <a href="/portfolios" class="hover:text-blue-400 transition-colors">Portfólio</a>
+        <a href="/portfolio" class="hover:text-blue-400 transition-colors">Portfólio</a>
         <a href="/gratuita" class="hover:text-blue-400 transition-colors">Consultoria Gratuita</a>
       </nav>
       <div>
@@ -75,8 +75,88 @@
   </main>
 
   <!-- FOOTER -->
-  <footer class="bg-black border-t border-white/10 py-6 text-center text-xs text-gray-500">
-    <p>© 2026 WiaDigital. Todos os direitos reservados.</p>
+  <footer class="bg-black border-t border-white/10 pt-16 pb-8 text-gray-400 text-sm">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12">
+        <div class="space-y-4">
+          <a href="/" class="block">
+            <img src="https://i.ibb.co/0ph5hPJL/logo-wiadigital-12.png" alt="WiaDigital" class="h-10 w-auto" />
+          </a>
+          <p class="text-xs text-gray-400 leading-relaxed">
+            Evoluímos suas ideias em softwares potentes e experiências marcantes. Qualidade técnica e soluções que geram valor de verdade.
+          </p>
+          <div class="flex items-center gap-3 pt-2">
+            <a href="#" class="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all text-gray-300">
+              <i data-lucide="facebook" class="w-4 h-4"></i>
+            </a>
+            <a href="#" class="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all text-gray-300">
+              <i data-lucide="instagram" class="w-4 h-4"></i>
+            </a>
+            <a href="#" class="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all text-gray-300">
+              <i data-lucide="linkedin" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold text-base mb-4">Soluções</h4>
+          <ul class="space-y-3 text-xs">
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span><a href="/servicos" class="hover:text-white transition-colors">Desenvolvimento de Software</a></li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span><a href="/servicos" class="hover:text-white transition-colors">Desenvolvimento de sites</a></li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span><a href="/servicos" class="hover:text-white transition-colors">Aplicativos Mobile</a></li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span><a href="/servicos" class="hover:text-white transition-colors">Design Gráfico & Social Media</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold text-base mb-4">Empresa</h4>
+          <ul class="space-y-3 text-xs">
+            <li><a href="/sobre" class="hover:text-white transition-colors">Sobre Nós</a></li>
+            <li><a href="/portfolio" class="hover:text-white transition-colors">Cases</a></li>
+            <li><a href="/servicos" class="hover:text-white transition-colors">Produtos</a></li>
+            <li><a href="https://wa.me/5551989019193" target="_blank" class="hover:text-white transition-colors">Fale Conosco</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold text-base mb-4">Contato</h4>
+          <div class="space-y-3">
+            <a href="mailto:contato@wiadigital.com.br" class="flex items-center gap-3 p-3 bg-brand-darkCard border border-white/10 rounded-xl text-xs hover:border-blue-500 transition-colors">
+              <div class="w-8 h-8 rounded-lg bg-blue-600/20 text-blue-400 flex items-center justify-center">
+                <i data-lucide="mail" class="w-4 h-4"></i>
+              </div>
+              <span class="text-gray-300">contato@wiadigital.com.br</span>
+            </a>
+
+            <a href="https://wa.me/5551989019193" target="_blank" class="flex items-center gap-3 p-3 bg-brand-darkCard border border-white/10 rounded-xl text-xs hover:border-blue-500 transition-colors">
+              <div class="w-8 h-8 rounded-lg bg-blue-600/20 text-blue-400 flex items-center justify-center">
+                <i data-lucide="phone" class="w-4 h-4"></i>
+              </div>
+              <span class="text-gray-300">WhatsApp: (051) 98901-9193</span>
+            </a>
+
+            <div class="flex items-center gap-3 p-3 bg-brand-darkCard border border-white/10 rounded-xl text-xs">
+              <div class="w-8 h-8 rounded-lg bg-blue-600/20 text-blue-400 flex items-center justify-center">
+                <i data-lucide="map-pin" class="w-4 h-4"></i>
+              </div>
+              <span class="text-gray-300">Viamão/RS</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="border-t border-white/10 pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-gray-500">
+        <p>© 2026 WiaDigital. Todos os direitos reservados.</p>
+        <div class="flex flex-wrap items-center gap-6">
+          <a href="/termos" class="hover:text-white transition-colors">Termos</a>
+          <a href="/privacidade" class="hover:text-white transition-colors">Privacidade</a>
+          <a href="/cookies" class="hover:text-white transition-colors">Cookies</a>
+          <a href="/lgpd" class="hover:text-white transition-colors">LGPD</a>
+          <a href="/exclusao-dados" class="hover:text-white transition-colors">Exclusão de dados</a>
+        </div>
+      </div>
+    </div>
   </footer>
 
   <script>lucide.createIcons();</script>
