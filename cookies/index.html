@@ -22,16 +22,17 @@
 </head>
 <body class="font-sans antialiased bg-brand-black text-gray-100 selection:bg-blue-600 selection:text-white flex flex-col min-h-screen">
 
+  <!-- HEADER -->
   <header class="fixed top-0 left-0 w-full z-50 bg-brand-black/90 backdrop-blur-md border-b border-white/10 py-3 px-6">
     <div class="max-w-7xl mx-auto flex items-center justify-between">
       <a href="/" class="flex items-center py-1">
         <img src="https://i.ibb.co/0ph5hPJL/logo-wiadigital-12.png" alt="WiaDigital" class="h-10 w-auto" />
       </a>
       <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300">
-        <a href="/" class="hover:text-blue-400 transition-colors">Início</a>
         <a href="/sobre" class="hover:text-blue-400 transition-colors">Sobre</a>
         <a href="/servicos" class="hover:text-blue-400 transition-colors">Serviços</a>
         <a href="/portfolio" class="hover:text-blue-400 transition-colors">Portfólio</a>
+        <a href="/gratuita" class="hover:text-blue-400 transition-colors">Consultoria Gratuita</a>
       </nav>
       <div>
         <a href="https://wa.me/5551989019193" target="_blank" class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs sm:text-sm px-6 py-3 rounded-xl transition-all shadow-[0_0_20px_rgba(37,99,235,0.4)]">
@@ -41,31 +42,113 @@
     </div>
   </header>
 
+  <!-- CONTENT -->
   <main class="flex-grow pt-32 pb-20 px-6">
     <div class="max-w-4xl mx-auto bg-brand-darkCard border border-white/10 rounded-3xl p-8 sm:p-12 shadow-2xl">
-      <span class="text-blue-500 font-mono text-xs uppercase tracking-widest font-bold">NAVEGAÇÃO E NAVEGABILIDADE</span>
+      <span class="text-blue-500 font-mono text-xs uppercase tracking-widest font-bold">NAVEGAÇÃO E EXPERIÊNCIA</span>
       <h1 class="font-heading font-extrabold text-3xl sm:text-5xl text-white mt-2 mb-8">Política de Cookies</h1>
 
       <div class="space-y-6 text-gray-300 text-sm sm:text-base leading-relaxed">
-        <p>A <strong>WiaDigital</strong> utiliza cookies e tecnologias semelhantes para garantir o funcionamento adequado do nosso site, melhorar a sua experiência de navegação e analisar o tráfego da página.</p>
+        <p>A <strong>WiaDigital</strong> utiliza cookies e tecnologias semelhantes para garantir o funcionamento adequado do nosso site, melhorar a sua experiência de navegação e analisar o tráfego da plataforma.</p>
 
         <h2 class="font-heading font-bold text-xl text-white pt-4">1. O que são Cookies?</h2>
-        <p>Cookies são pequenos arquivos de texto armazenados no seu dispositivo (computador ou celular) ao visitar um site. Eles ajudam a lembrar de suas preferências e otimizar o desempenho da plataforma.</p>
+        <p>Cookies são pequenos arquivos de texto armazenados no seu dispositivo (computador, tablet ou celular) ao visitar um site. Eles ajudam a lembrar suas preferências e otimizar a performance durante o uso.</p>
 
-        <h2 class="font-heading font-bold text-xl text-white pt-4">2. Tipos de Cookies que Utilizamos</h2>
+        <h2 class="font-heading font-bold text-xl text-white pt-4">2. Tipos de Cookies Utilizados</h2>
         <ul class="list-disc pl-6 space-y-2 text-gray-400">
-          <li><strong>Cookies Necessários:</strong> Essenciais para o funcionamento básico do site e segurança da plataforma.</li>
-          <li><strong>Cookies de Desempenho e Métricas:</strong> Nos ajudam a compreender como os visitantes interagem com o site, permitindo aprimorar a usabilidade.</li>
+          <li><strong>Cookies Estritamente Necessários:</strong> Fundamentais para a navegação básica e segurança do site.</li>
+          <li><strong>Cookies de Desempenho e Métricas:</strong> Coletam estatísticas anônimas sobre a navegação para podermos melhorar continuamente nossas páginas.</li>
         </ul>
 
         <h2 class="font-heading font-bold text-xl text-white pt-4">3. Gerenciamento de Cookies</h2>
-        <p>Você pode alterar ou desativar os cookies diretamente nas configurações do seu navegador a qualquer momento. Note que desativar certos cookies pode afetar o desempenho de algumas funções do site.</p>
+        <p>Você pode controlar ou desativar os cookies alterando as configurações do seu navegador a qualquer momento. Vale lembrar que a desativação de cookies necessários pode afetar algumas funcionalidades do site.</p>
       </div>
     </div>
   </main>
 
-  <footer class="bg-black border-t border-white/10 py-6 text-center text-xs text-gray-500">
-    <p>© 2026 WiaDigital. Todos os direitos reservados.</p>
+  <!-- FOOTER -->
+  <footer class="bg-black border-t border-white/10 pt-16 pb-8 text-gray-400 text-sm">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12">
+        <div class="space-y-4">
+          <a href="/" class="block">
+            <img src="https://i.ibb.co/0ph5hPJL/logo-wiadigital-12.png" alt="WiaDigital" class="h-10 w-auto" />
+          </a>
+          <p class="text-xs text-gray-400 leading-relaxed">
+            Evoluímos suas ideias em softwares potentes e experiências marcantes. Qualidade técnica e soluções que geram valor de verdade.
+          </p>
+          <div class="flex items-center gap-3 pt-2">
+            <a href="#" class="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all text-gray-300">
+              <i data-lucide="facebook" class="w-4 h-4"></i>
+            </a>
+            <a href="#" class="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all text-gray-300">
+              <i data-lucide="instagram" class="w-4 h-4"></i>
+            </a>
+            <a href="#" class="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all text-gray-300">
+              <i data-lucide="linkedin" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold text-base mb-4">Soluções</h4>
+          <ul class="space-y-3 text-xs">
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span><a href="/servicos" class="hover:text-white transition-colors">Desenvolvimento de Software</a></li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span><a href="/servicos" class="hover:text-white transition-colors">Desenvolvimento de sites</a></li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span><a href="/servicos" class="hover:text-white transition-colors">Aplicativos Mobile</a></li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span><a href="/servicos" class="hover:text-white transition-colors">Design Gráfico & Social Media</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold text-base mb-4">Empresa</h4>
+          <ul class="space-y-3 text-xs">
+            <li><a href="/sobre" class="hover:text-white transition-colors">Sobre Nós</a></li>
+            <li><a href="/portfolio" class="hover:text-white transition-colors">Cases</a></li>
+            <li><a href="/servicos" class="hover:text-white transition-colors">Produtos</a></li>
+            <li><a href="https://wa.me/5551989019193" target="_blank" class="hover:text-white transition-colors">Fale Conosco</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold text-base mb-4">Contato</h4>
+          <div class="space-y-3">
+            <a href="mailto:contato@wiadigital.com.br" class="flex items-center gap-3 p-3 bg-brand-darkCard border border-white/10 rounded-xl text-xs hover:border-blue-500 transition-colors">
+              <div class="w-8 h-8 rounded-lg bg-blue-600/20 text-blue-400 flex items-center justify-center">
+                <i data-lucide="mail" class="w-4 h-4"></i>
+              </div>
+              <span class="text-gray-300">contato@wiadigital.com.br</span>
+            </a>
+
+            <a href="https://wa.me/5551989019193" target="_blank" class="flex items-center gap-3 p-3 bg-brand-darkCard border border-white/10 rounded-xl text-xs hover:border-blue-500 transition-colors">
+              <div class="w-8 h-8 rounded-lg bg-blue-600/20 text-blue-400 flex items-center justify-center">
+                <i data-lucide="phone" class="w-4 h-4"></i>
+              </div>
+              <span class="text-gray-300">WhatsApp: (051) 98901-9193</span>
+            </a>
+
+            <div class="flex items-center gap-3 p-3 bg-brand-darkCard border border-white/10 rounded-xl text-xs">
+              <div class="w-8 h-8 rounded-lg bg-blue-600/20 text-blue-400 flex items-center justify-center">
+                <i data-lucide="map-pin" class="w-4 h-4"></i>
+              </div>
+              <span class="text-gray-300">Viamão/RS</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="border-t border-white/10 pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-gray-500">
+        <p>© 2026 WiaDigital. Todos os direitos reservados.</p>
+        <div class="flex flex-wrap items-center gap-6">
+          <a href="/termos" class="hover:text-white transition-colors">Termos</a>
+          <a href="/privacidade" class="hover:text-white transition-colors">Privacidade</a>
+          <a href="/cookies" class="hover:text-white transition-colors">Cookies</a>
+          <a href="/lgpd" class="hover:text-white transition-colors">LGPD</a>
+          <a href="/exclusaodedados" class="hover:text-white transition-colors">Exclusão de dados</a>
+        </div>
+      </div>
+    </div>
   </footer>
 
   <script>lucide.createIcons();</script>
