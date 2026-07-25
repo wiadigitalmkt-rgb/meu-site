@@ -1,6 +1,8 @@
 <!-- essa função serve pra urls nao ficarem com nome das pastas junto exemplo: 
 https://wiadigital.com.br/sobre e com esta função fica: https://wiadigital.com.br/sobre -->
 
+<!-- Tailwind CSS CDN -->
+
 {
   "rewrites": [
     { "source": "/sobre", "destination": "/pages/sobre" },
