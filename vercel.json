@@ -6,6 +6,12 @@ https://wiadigital.com.br/sobre e com esta função fica: https://wiadigital.com
     { "source": "/sobre", "destination": "/pages/sobre" },
     { "source": "/servicos", "destination": "/pages/servicos" },
     { "source": "/portfolio", "destination": "/pages/portfolio" },
-    { "source": "/gratuita", "destination": "/pages/gratuita" }
+    { "source": "/gratuita", "destination": "/pages/gratuita" },
+
+    { "source": "/termos", "destination": "/legal/termos" },
+    { "source": "/privacidade", "destination": "/legal/privacidade" },
+    { "source": "/cookies", "destination": "/legal/cookies" },
+    { "source": "/lgpd", "destination": "/legal/lgpd" },
+    { "source": "/exclusaodedados", "destination": "/legal/exclusaodedados" }
   ]
 }
