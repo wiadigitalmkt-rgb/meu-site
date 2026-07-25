@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    { "source": "/sobre", "destination": "/pages/sobre" },
+    { "source": "/servicos", "destination": "/pages/servicos" },
+    { "source": "/portfolio", "destination": "/pages/portfolio" },
+    { "source": "/gratuita", "destination": "/pages/gratuita" }
+  ]
+}
