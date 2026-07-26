@@ -58,26 +58,30 @@
   <!-- FORMULÁRIO -->
   <section class="py-12 px-6 bg-brand-black flex-grow">
     <div class="max-w-3xl mx-auto bg-brand-darkCard border border-white/10 p-8 sm:p-12 rounded-3xl relative">
-      <form class="space-y-6">
+      <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
+        <!-- Chave Web3Forms e Assunto do E-mail -->
+        <input type="hidden" name="access_key" value="8e344db2-228c-4e5a-be25-9ff17252641e">
+        <input type="hidden" name="subject" value="Nova Solicitação de Consultoria Gratuita - WiaDigital">
+
         <div>
           <label class="block text-xs font-medium text-gray-300 mb-2">Nome Completo</label>
-          <input type="text" placeholder="Seu nome" class="w-full bg-brand-black border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500 transition-colors" required>
+          <input type="text" name="nome" placeholder="Seu nome" class="w-full bg-brand-black border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500 transition-colors" required>
         </div>
 
         <div class="grid sm:grid-cols-2 gap-6">
           <div>
             <label class="block text-xs font-medium text-gray-300 mb-2">E-mail corporativo ou pessoal</label>
-            <input type="email" placeholder="seu@email.com" class="w-full bg-brand-black border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500 transition-colors" required>
+            <input type="email" name="email" placeholder="seu@email.com" class="w-full bg-brand-black border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500 transition-colors" required>
           </div>
           <div>
             <label class="block text-xs font-medium text-gray-300 mb-2">WhatsApp</label>
-            <input type="tel" placeholder="(00) 00000-0000" class="w-full bg-brand-black border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500 transition-colors" required>
+            <input type="tel" name="whatsapp" placeholder="(00) 00000-0000" class="w-full bg-brand-black border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500 transition-colors" required>
           </div>
         </div>
 
         <div>
           <label class="block text-xs font-medium text-gray-300 mb-2">Sobre o seu projeto</label>
-          <textarea rows="4" placeholder="Conte brevemente o que você precisa desenvolver..." class="w-full bg-brand-black border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500 transition-colors" required></textarea>
+          <textarea rows="4" name="mensagem" placeholder="Conte brevemente o que você precisa desenvolver..." class="w-full bg-brand-black border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500 transition-colors" required></textarea>
         </div>
 
         <button type="submit" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold text-sm py-4 rounded-xl transition-all shadow-[0_0_20px_rgba(37,99,235,0.4)] flex items-center justify-center gap-2">
