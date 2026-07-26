@@ -30,6 +30,20 @@
       background-size: 40px 40px;
       background-image: linear-gradient(to right, rgba(37, 99, 235, 0.07) 1px, transparent 1px), linear-gradient(to bottom, rgba(37, 99, 235, 0.07) 1px, transparent 1px);
     }
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-12px) rotate(2deg); }
+    }
+    @keyframes floatReverse {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(12px) rotate(-2deg); }
+    }
+    .animate-float-slow {
+      animation: float 6s ease-in-out infinite;
+    }
+    .animate-float-reverse {
+      animation: floatReverse 7s ease-in-out infinite;
+    }
   </style>
 </head>
 <body class="font-sans antialiased bg-brand-black text-gray-100 flex flex-col min-h-screen">
@@ -52,9 +66,32 @@
     </div>
   </header>
 
-  <!-- HERO SOBRE -->
-  <section class="pt-36 pb-20 px-6 bg-grid-pattern relative">
-    <div class="max-w-4xl mx-auto text-center">
+  <!-- HERO SOBRE COM ÍCONES FLUTUANTES -->
+  <section class="pt-36 pb-20 px-6 bg-grid-pattern relative overflow-hidden">
+    <!-- Elementos Flutuantes Dev -->
+    <div class="absolute inset-0 pointer-events-none select-none overflow-hidden max-w-7xl mx-auto">
+      <!-- Tag </ > -->
+      <div class="absolute top-12 left-6 sm:left-12 text-blue-500/15 font-mono text-4xl sm:text-6xl font-bold animate-float-slow">
+        &lt;/&gt;
+      </div>
+      
+      <!-- Chaves { } -->
+      <div class="absolute top-16 right-8 sm:right-16 text-blue-400/15 font-mono text-5xl sm:text-7xl font-bold animate-float-reverse">
+        { }
+      </div>
+      
+      <!-- Código const dev = true; -->
+      <div class="absolute bottom-6 left-1/4 -translate-x-1/2 text-blue-500/10 font-mono text-lg sm:text-2xl font-semibold animate-float-slow hidden sm:block">
+        const dev = true;
+      </div>
+      
+      <!-- Colchetes [ ] -->
+      <div class="absolute bottom-10 right-1/4 text-blue-400/10 font-mono text-3xl sm:text-5xl font-bold animate-float-reverse hidden sm:block">
+        [ ]
+      </div>
+    </div>
+
+    <div class="max-w-4xl mx-auto text-center relative z-10">
       <span class="text-xs font-mono font-semibold text-blue-400 bg-blue-500/10 border border-blue-500/20 px-4 py-1.5 rounded-full">QUEM SOMOS</span>
       <h1 class="font-heading font-extrabold text-4xl sm:text-6xl text-white mt-6 tracking-tight">
         Desenvolvemos tecnologia com <span class="text-blue-500">propósito</span> e alta performance.
@@ -160,12 +197,12 @@
     <div class="max-w-7xl mx-auto border-t border-white/10 pt-6 flex flex-col md:flex-row items-center justify-between text-xs text-gray-500 gap-4">
       <p>© 2026 WiaDigital. Todos os direitos reservados.</p>
       <div class="flex flex-wrap items-center gap-6 text-gray-400">
-  <a href="/termos" class="hover:text-white transition-colors">Termos</a>
-  <a href="/privacidade" class="hover:text-white transition-colors">Privacidade</a>
-  <a href="/cookies" class="hover:text-white transition-colors">Cookies</a>
-  <a href="/lgpd" class="hover:text-white transition-colors">LGPD</a>
-  <a href="/exclusaodedados" class="hover:text-white transition-colors">Exclusão de dados</a>
-</div>
+        <a href="/termos" class="hover:text-white transition-colors">Termos</a>
+        <a href="/privacidade" class="hover:text-white transition-colors">Privacidade</a>
+        <a href="/cookies" class="hover:text-white transition-colors">Cookies</a>
+        <a href="/lgpd" class="hover:text-white transition-colors">LGPD</a>
+        <a href="/exclusaodedados" class="hover:text-white transition-colors">Exclusão de dados</a>
+      </div>
     </div>
   </footer>
 
